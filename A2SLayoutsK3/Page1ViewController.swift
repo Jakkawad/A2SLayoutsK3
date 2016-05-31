@@ -50,6 +50,8 @@ class Page1ViewController: UIViewController, UITableViewDataSource, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationController?.navigationBar.barTintColor = UIColor(red: 16/255, green: 132/255, blue: 142/255, alpha: 1.0)
+        self.title = "All2Sale"
         // Do any additional setup after loading the view.
     }
     
