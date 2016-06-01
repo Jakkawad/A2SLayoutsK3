@@ -22,3 +22,9 @@ func urlStoreImage(imageUrl:String) -> NSURL {
     let fullUrl = NSURL(string: baseUrl)
     return fullUrl!
 }
+
+func dummyText() -> String {
+    var baseText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec placerat porta tempus. Fusce non suscipit."
+    
+    return baseText
+}

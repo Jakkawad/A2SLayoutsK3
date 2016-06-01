@@ -25,6 +25,7 @@ class Page1Cell2TableViewCell: UITableViewCell, UICollectionViewDataSource, UICo
         let col0 = collectionView.dequeueReusableCellWithReuseIdentifier("collectCell0", forIndexPath: indexPath) as? Page1Cell2CollectionViewCell
         let dummyImageURL = NSURL(string: dummyImage("176x176"))
         col0?.imageViewProduct.setImageWithURL(dummyImageURL!)
+        col0?.lblProductName.text = dummyText()
         return col0!
     }
     override func awakeFromNib() {
