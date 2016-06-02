@@ -28,3 +28,8 @@ func dummyText() -> String {
     
     return baseText
 }
+
+func dummyPrice() -> String {
+    let basePrice = "197.5"
+    return basePrice
+}

@@ -1,17 +1,14 @@
 //
-//  Page1ProductDetailCell4TableViewCell.swift
+//  Page1ProductDetailCell5TableViewCell.swift
 //  A2SLayoutsK3
 //
-//  Created by admin on 6/1/2559 BE.
+//  Created by admin on 6/2/2559 BE.
 //  Copyright © 2559 All2Sale. All rights reserved.
 //
 
 import UIKit
-import Alamofire
-import SwiftyJSON
-import MapleBacon
 
-class Page1ProductDetailCell4TableViewCell: UITableViewCell {
+class Page1ProductDetailCell5TableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
