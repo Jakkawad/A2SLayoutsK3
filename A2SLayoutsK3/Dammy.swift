@@ -24,7 +24,7 @@ func urlStoreImage(imageUrl:String) -> NSURL {
 }
 
 func dummyText() -> String {
-    var baseText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec placerat porta tempus. Fusce non suscipit."
+    let baseText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec placerat porta tempus. Fusce non suscipit."
     
     return baseText
 }
