@@ -27,13 +27,13 @@ class Page1ViewController: UIViewController, UITableViewDataSource, UITableViewD
         */
         
         if indexPath.row == 0 {
-            let cell0 = tableView.dequeueReusableCellWithIdentifier("tableCell0") as? Page1Cell0TableViewCell
+            let cell0 = tableView.dequeueReusableCellWithIdentifier(BaseCell.tableCell0) as? Page1Cell0TableViewCell
             return cell0!
         } else if indexPath.row == 1 {
-            let cell1 = tableView.dequeueReusableCellWithIdentifier("tableCell1") as? Page1Cell1TableViewCell
+            let cell1 = tableView.dequeueReusableCellWithIdentifier(BaseCell.tableCell1) as? Page1Cell1TableViewCell
             return cell1!
         } else {
-            let cell2 = tableView.dequeueReusableCellWithIdentifier("tableCell2") as? Page1Cell2TableViewCell
+            let cell2 = tableView.dequeueReusableCellWithIdentifier(BaseCell.tableCell2) as? Page1Cell2TableViewCell
             return cell2!
         }
     }

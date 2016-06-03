@@ -22,7 +22,7 @@ class Page1Cell0TableViewCell: UITableViewCell, UICollectionViewDataSource, UICo
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let col0 = collectionView.dequeueReusableCellWithReuseIdentifier("collectCell0", forIndexPath: indexPath) as? Page1Cell0CollectionViewCell
+        let col0 = collectionView.dequeueReusableCellWithReuseIdentifier(BaseCell.collectCell0, forIndexPath: indexPath) as? Page1Cell0CollectionViewCell
         let dummyImageURL = NSURL(string: dummyImage("100x100"))
         col0?.imageViewProduct.setImageWithURL(dummyImageURL!)
         return col0!
