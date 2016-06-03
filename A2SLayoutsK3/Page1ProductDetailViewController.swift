@@ -54,6 +54,7 @@ class Page1ProductDetailViewController: UIViewController, UITableViewDataSource,
         Other
         */
         if indexPath.section == 0 {
+            //Image
             let cell0 = tableView.dequeueReusableCellWithIdentifier(BaseCell.tableCell0) as? Page1ProductDetailCell0TableViewCell
                 let dummyImageURL = NSURL(string: dummyImage("250x176"))
                 cell0?.imageViewProduct.setImageWithURL(dummyImageURL!)
@@ -61,21 +62,27 @@ class Page1ProductDetailViewController: UIViewController, UITableViewDataSource,
                 cell0?.lblProductPrice.text = dummyPrice()
             return cell0!
         } else if indexPath.section == 1 {
+            //Name
             let cell1 = tableView.dequeueReusableCellWithIdentifier(BaseCell.tableCell1)
             return cell1!
         } else if indexPath.section == 2 {
+            //Review
             let cell2 = tableView.dequeueReusableCellWithIdentifier(BaseCell.tableCell2)
             return cell2!
         } else if indexPath.section == 3 {
+            //Payment
             let cell3 = tableView.dequeueReusableCellWithIdentifier(BaseCell.tableCell3)
             return  cell3!
         } else if indexPath.section == 4 {
+            //Shipping
             let cell4 = tableView.dequeueReusableCellWithIdentifier(BaseCell.tableCell4)
             return cell4!
         } else if indexPath.section == 5 {
+            //Warranty
             let cell5 = tableView.dequeueReusableCellWithIdentifier(BaseCell.tableCell5)
             return cell5!
         } else {
+            //Other
             let cell6 = tableView.dequeueReusableCellWithIdentifier(BaseCell.tableCell6)
             return cell6!
         }
