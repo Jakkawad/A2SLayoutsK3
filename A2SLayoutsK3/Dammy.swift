@@ -33,3 +33,8 @@ func dummyPrice() -> String {
     let basePrice = "197.5"
     return basePrice
 }
+
+func dummyDescription() -> String {
+    let baseDescription = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus imperdiet dui egestas risus pretium cursus. Ut sagittis elementum tincidunt. Nam eleifend vel lacus ut maximus. Phasellus fringilla convallis sem, vel iaculis magna imperdiet ac. Proin ac urna sed massa varius porttitor vel id erat. Praesent blandit nisi eget finibus sodales. Duis orci lectus, pretium quis leo et, fermentum auctor risus. Aliquam eu nisi nec tellus tincidunt condimentum. Curabitur euismod lectus nisl."
+    return baseDescription
+}

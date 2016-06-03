@@ -41,7 +41,7 @@ class Page1ProductDetailViewController: UIViewController, UITableViewDataSource,
          section 0
         Image
          section 1
-        Name
+        Description
          section 2
         Review
          section 3
@@ -62,8 +62,11 @@ class Page1ProductDetailViewController: UIViewController, UITableViewDataSource,
                 cell0?.lblProductPrice.text = dummyPrice()
             return cell0!
         } else if indexPath.section == 1 {
-            //Name
-            let cell1 = tableView.dequeueReusableCellWithIdentifier(BaseCell.tableCell1)
+            //Description
+            let cell1 = tableView.dequeueReusableCellWithIdentifier(BaseCell.tableCell1) as? Page1ProductDetailCell1TableViewCell
+            
+            cell1?.lblProductDescription.text = dummyDescription()
+            
             return cell1!
         } else if indexPath.section == 2 {
             //Review
@@ -106,6 +109,23 @@ class Page1ProductDetailViewController: UIViewController, UITableViewDataSource,
         }
     }
     
+    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if section == 0 {
+            return ""
+        } else if section == 1 {
+            return "Product Detail"
+        } else if section == 2 {
+            return "Review"
+        } else if section == 3 {
+            return "Payment"
+        } else if section == 4 {
+            return "Shipping"
+        } else if section == 5 {
+            return "Warranty"
+        } else {
+            return "Other Product"
+        }
+    }
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         if section == 0 {
             return CGFloat.min

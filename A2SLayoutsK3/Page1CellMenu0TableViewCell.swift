@@ -1,16 +1,16 @@
 //
-//  Page1ProductDetailCell1TableViewCell.swift
+//  Page1CellMenu0TableViewCell.swift
 //  A2SLayoutsK3
 //
-//  Created by admin on 6/1/2559 BE.
+//  Created by Jakkawad Chaiplee on 6/3/2559 BE.
 //  Copyright © 2559 All2Sale. All rights reserved.
 //
 
 import UIKit
 
-class Page1ProductDetailCell1TableViewCell: UITableViewCell {
+class Page1CellMenu0TableViewCell: UITableViewCell {
 
-    @IBOutlet weak var lblProductDescription:UILabel!
+    @IBOutlet weak var imageViewBanner:UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

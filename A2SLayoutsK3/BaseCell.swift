@@ -19,4 +19,6 @@ struct BaseCell {
     static var tableCell7 = "tableCell7"
     
     static var collectCell0 = "collectCell0"
+    
+    static var menuCell0 = "menuCell0"
 }

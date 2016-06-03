@@ -17,7 +17,7 @@ class Page1ViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return 4
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -25,11 +25,15 @@ class Page1ViewController: UIViewController, UITableViewDataSource, UITableViewD
         let cell0 = tableView.dequeueReusableCellWithIdentifier("tableCell0")
         return cell0!
         */
-        
         if indexPath.row == 0 {
+            let cellMenu0 = tableView.dequeueReusableCellWithIdentifier(BaseCell.menuCell0) as? Page1CellMenu0TableViewCell
+            let dummyImageURL = NSURL(string: dummyImage("300x100"))
+            cellMenu0?.imageViewBanner.setImageWithURL(dummyImageURL!)
+            return cellMenu0!
+        } else if indexPath.row == 1 {
             let cell0 = tableView.dequeueReusableCellWithIdentifier(BaseCell.tableCell0) as? Page1Cell0TableViewCell
             return cell0!
-        } else if indexPath.row == 1 {
+        } else if indexPath.row == 2 {
             let cell1 = tableView.dequeueReusableCellWithIdentifier(BaseCell.tableCell1) as? Page1Cell1TableViewCell
             return cell1!
         } else {
@@ -40,13 +44,20 @@ class Page1ViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         if indexPath.row == 0 {
-            return 224
+            return 120
         } else if indexPath.row == 1 {
+            return 224
+        } else if indexPath.row == 2 {
             return 224
         } else {
             return 1000
         }
     }
+    
+    func tableView(tableView: UITableView, shouldHighlightRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return false
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
