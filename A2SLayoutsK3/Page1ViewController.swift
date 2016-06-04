@@ -27,7 +27,7 @@ class Page1ViewController: UIViewController, UITableViewDataSource, UITableViewD
         */
         if indexPath.row == 0 {
             let cellMenu0 = tableView.dequeueReusableCellWithIdentifier(BaseCell.menuCell0) as? Page1CellMenu0TableViewCell
-            let dummyImageURL = NSURL(string: dummyImage("300x100"))
+            let dummyImageURL = NSURL(string: dummyImage("200x100"))
             cellMenu0?.imageViewBanner.setImageWithURL(dummyImageURL!)
             return cellMenu0!
         } else if indexPath.row == 1 {
