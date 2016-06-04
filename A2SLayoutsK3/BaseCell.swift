@@ -22,3 +22,7 @@ struct BaseCell {
     
     static var menuCell0 = "menuCell0"
 }
+
+struct BaseUrl {
+    static var a2sUrl = "https://www.all2sale.com/sendmail/testmail/testfunction/json/apitest.php"
+}

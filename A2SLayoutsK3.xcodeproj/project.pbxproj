@@ -40,6 +40,7 @@
 		8477A6F31CFECF230000BFEB /* Page1ProductDetailCell2TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8477A6F21CFECF230000BFEB /* Page1ProductDetailCell2TableViewCell.swift */; };
 		8477A6F51CFECF2C0000BFEB /* Page1ProductDetailCell4TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8477A6F41CFECF2C0000BFEB /* Page1ProductDetailCell4TableViewCell.swift */; };
 		8477A6F71CFECF5A0000BFEB /* Page1ProductDetailCell3TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8477A6F61CFECF5A0000BFEB /* Page1ProductDetailCell3TableViewCell.swift */; };
+		848AF9791D02836800A3B84A /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848AF9781D02836800A3B84A /* Product.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +81,7 @@
 		8477A6F21CFECF230000BFEB /* Page1ProductDetailCell2TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page1ProductDetailCell2TableViewCell.swift; sourceTree = "<group>"; };
 		8477A6F41CFECF2C0000BFEB /* Page1ProductDetailCell4TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page1ProductDetailCell4TableViewCell.swift; sourceTree = "<group>"; };
 		8477A6F61CFECF5A0000BFEB /* Page1ProductDetailCell3TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page1ProductDetailCell3TableViewCell.swift; sourceTree = "<group>"; };
+		848AF9781D02836800A3B84A /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -324,6 +326,7 @@
 			children = (
 				8471060C1CFD7398003B5DD1 /* ViewController.swift */,
 				8477A6EC1CFEAECC0000BFEB /* BaseCell.swift */,
+				848AF9781D02836800A3B84A /* Product.swift */,
 			);
 			name = Struct;
 			sourceTree = "<group>";
@@ -483,6 +486,7 @@
 				84593C7E1D00286200B60777 /* Page1ProductDetailCell6TableViewCell.swift in Sources */,
 				319C68341D01D94D00FC3516 /* Page1CellMenu0TableViewCell.swift in Sources */,
 				319C68361D01DF3500FC3516 /* Page2ViewController.swift in Sources */,
+				848AF9791D02836800A3B84A /* Product.swift in Sources */,
 				8477A6F71CFECF5A0000BFEB /* Page1ProductDetailCell3TableViewCell.swift in Sources */,
 				8471060B1CFD7398003B5DD1 /* AppDelegate.swift in Sources */,
 				84593C711CFFE04200B60777 /* Page1ProductAllViewController.swift in Sources */,

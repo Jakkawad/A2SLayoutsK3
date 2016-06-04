@@ -128,7 +128,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="223"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="0D2-nq-QkY">
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="0D2-nq-QkY">
                                                     <rect key="frame" x="0.0" y="23" width="600" height="200"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="VfY-pD-CdW">
@@ -165,6 +165,8 @@
                                                             </view>
                                                             <connections>
                                                                 <outlet property="imageViewProduct" destination="pLJ-UQ-7Fk" id="Ilj-Nx-bZp"/>
+                                                                <outlet property="lblProductName" destination="Y6P-6b-YC6" id="CBe-qm-9jj"/>
+                                                                <outlet property="lblProductPrice" destination="JqU-Xj-gWf" id="qn8-10-TAh"/>
                                                                 <segue destination="c4d-0T-lnd" kind="push" id="4YB-Yb-boa"/>
                                                             </connections>
                                                         </collectionViewCell>
@@ -191,8 +193,12 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="wPA-XH-Oth" firstAttribute="top" secondItem="ecn-fG-7a9" secondAttribute="topMargin" id="3v2-zZ-kGB"/>
+                                                <constraint firstItem="0D2-nq-QkY" firstAttribute="top" secondItem="ecn-fG-7a9" secondAttribute="topMargin" constant="15" id="I0I-dx-w8E"/>
                                                 <constraint firstItem="dSG-YG-faF" firstAttribute="trailing" secondItem="ecn-fG-7a9" secondAttribute="trailingMargin" id="WuZ-Iv-LMF"/>
+                                                <constraint firstItem="0D2-nq-QkY" firstAttribute="leading" secondItem="ecn-fG-7a9" secondAttribute="leadingMargin" constant="-8" id="dSy-Ua-zom"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="0D2-nq-QkY" secondAttribute="bottom" constant="-8" id="heY-Zu-3ux"/>
                                                 <constraint firstItem="wPA-XH-Oth" firstAttribute="leading" secondItem="ecn-fG-7a9" secondAttribute="leadingMargin" id="lWq-DM-rIQ"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="0D2-nq-QkY" secondAttribute="trailing" constant="-8" id="o6m-Ys-7d7"/>
                                                 <constraint firstItem="dSG-YG-faF" firstAttribute="top" secondItem="ecn-fG-7a9" secondAttribute="topMargin" constant="-1" id="r2u-Mg-9xS"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -244,6 +250,8 @@
                                                             </view>
                                                             <connections>
                                                                 <outlet property="imageViewProduct" destination="vw9-vk-yn7" id="MEt-qP-Ns0"/>
+                                                                <outlet property="lblProductName" destination="YtX-Gb-uq2" id="6n5-fC-i4I"/>
+                                                                <outlet property="lblProductPrice" destination="ptg-A0-hHM" id="ogo-sn-Bpc"/>
                                                                 <segue destination="c4d-0T-lnd" kind="push" id="wmM-dT-HsE"/>
                                                             </connections>
                                                         </collectionViewCell>
