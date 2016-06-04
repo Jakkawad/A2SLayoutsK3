@@ -14,7 +14,7 @@ class Page1ProductDetailViewController: UIViewController, UITableViewDataSource,
     @IBOutlet weak var tableView:UITableView!
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 7
+        return 8
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -30,6 +30,8 @@ class Page1ProductDetailViewController: UIViewController, UITableViewDataSource,
         } else if section == 4 {
             return 1
         } else if section == 5 {
+            return 1
+        } else if section == 6{
             return 1
         } else {
             return 1
@@ -51,6 +53,8 @@ class Page1ProductDetailViewController: UIViewController, UITableViewDataSource,
          section 5
         Warranty
          section 6
+        Shop
+         section 7
         Other
         */
         if indexPath.section == 0 {
@@ -84,6 +88,9 @@ class Page1ProductDetailViewController: UIViewController, UITableViewDataSource,
             //Warranty
             let cell5 = tableView.dequeueReusableCellWithIdentifier(BaseCell.tableCell5)
             return cell5!
+        } else if indexPath.section == 6 {
+            let cell7 = tableView.dequeueReusableCellWithIdentifier(BaseCell.tableCell7)
+            return cell7!
         } else {
             //Other
             let cell6 = tableView.dequeueReusableCellWithIdentifier(BaseCell.tableCell6)
@@ -104,6 +111,8 @@ class Page1ProductDetailViewController: UIViewController, UITableViewDataSource,
             return 100
         } else if indexPath.section == 5 {
             return 100
+        } else if indexPath.section == 6 {
+            return 100
         } else {
             return 224
         }
@@ -122,6 +131,8 @@ class Page1ProductDetailViewController: UIViewController, UITableViewDataSource,
             return "Shipping"
         } else if section == 5 {
             return "Warranty"
+        } else if section == 6 {
+            return "Shop"
         } else {
             return "Other Product"
         }
