@@ -18,7 +18,7 @@ class Page1Cell1TableViewCell: UITableViewCell, UICollectionViewDataSource, UICo
     var products = [Product]()
     
     func loadJSON() {
-        Alamofire.request(.POST, "https://www.all2sale.com/sendmail/testfunction/json/apitest.php", parameters: ["api":"product_rand","product_rand":"8","value":"`Id`,`ProductName`,`ProductPrice`,`ProductShowImage`,`ProductRating`"]).responseJSON { response in
+        Alamofire.request(.POST, BaseUrl.a2sUrl, parameters: ["api":"product_rand","product_rand":"8","value":"`Id`,`ProductName`,`ProductPrice`,`ProductShowImage`,`ProductRating`"]).responseJSON { response in
             //print(response.result.value)
             let value = response.result.value
             let json = JSON(value!)
@@ -27,8 +27,10 @@ class Page1Cell1TableViewCell: UITableViewCell, UICollectionViewDataSource, UICo
                 let productName = object["ProductName"].stringValue
                 let productImage = object["ProductShowImage"].stringValue
                 let productPrice = object["ProductPrice"].stringValue
+                let productRating = object["ProductRating"].stringValue
                 var imageUrl = urlStoreImage(productImage)
-                self.products.append(Product(_id: productID, _name: productName, _image: imageUrl, _price: productPrice))
+                var imageRatingUrl = urlStoreImage(productRating)
+                self.products.append(Product(_id: productID, _name: productName, _image: imageUrl, _price: productPrice, _rating: imageRatingUrl))
                 self.collectionView.reloadData()
             }
         }

@@ -18,7 +18,7 @@ class Page1Cell2TableViewCell: UITableViewCell, UICollectionViewDataSource, UICo
     var products = [Product]()
     
     func loadJSON() {
-        Alamofire.request(.POST, "https://www.all2sale.com/sendmail/testfunction/json/apitest.php", parameters: ["api":"product_rand","product_rand":"8","value":"`Id`,`ProductName`,`ProductPrice`,`ProductShowImage`,`ProductRating`"]).responseJSON { response in
+        Alamofire.request(.POST, BaseUrl.a2sUrl, parameters: ["api":"product_rand","product_rand":"8","value":"`Id`,`ProductName`,`ProductPrice`,`ProductShowImage`,`ProductRating`"]).responseJSON { response in
             //print(response.result.value)
             let value = response.result.value
             let json = JSON(value!)
@@ -27,8 +27,10 @@ class Page1Cell2TableViewCell: UITableViewCell, UICollectionViewDataSource, UICo
                 let productName = object["ProductName"].stringValue
                 let productImage = object["ProductShowImage"].stringValue
                 let productPrice = object["ProductPrice"].stringValue
+                let productRating = object["ProductRating"].stringValue
                 var imageUrl = urlStoreImage(productImage)
-                self.products.append(Product(_id: productID, _name: productName, _image: imageUrl, _price: productPrice))
+                var imageRatingUrl = urlRatingImage(productRating)
+                self.products.append(Product(_id: productID, _name: productName, _image: imageUrl, _price: productPrice, _rating: imageRatingUrl))
                 self.collectionView.reloadData()
             }
         }
@@ -47,12 +49,24 @@ class Page1Cell2TableViewCell: UITableViewCell, UICollectionViewDataSource, UICo
         let col0 = collectionView.dequeueReusableCellWithReuseIdentifier(BaseCell.collectCell0, forIndexPath: indexPath) as? Page1Cell2CollectionViewCell
         let dummyImageURL = NSURL(string: dummyImage("176x176"))
         let product:Product
+        
         //col0?.imageViewProduct.setImageWithURL(dummyImageURL!)
         product = products[indexPath.row]
+        //print(product)
         col0?.lblProductName.text = product.productName
         col0?.lblProductPrice.text = product.productPrice
         col0?.imageViewProduct.setImageWithURL(product.productImage)
+        col0?.imageViewRating.setImageWithURL(product.productRating)
         return col0!
+    }
+    
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        //print(products[indexPath.row])
+        let product:Product
+        product = products[indexPath.row]
+        //print(product)
+        ProductSelected.productId = product.productId
+        //print(ProductSelected.productId)
     }
     override func awakeFromNib() {
         super.awakeFromNib()

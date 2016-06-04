@@ -8,10 +8,21 @@
 
 import UIKit
 import MapleBacon
+import Alamofire
+import SwiftyJSON
 
 class Page1ProductDetailViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var tableView:UITableView!
+    
+    
+    
+    func loadJSON() {
+        Alamofire.request(.POST, BaseUrl.a2sUrl, parameters: ["api":"product_detail_id","product_detail_id":ProductSelected.productId,"value":"`Id`,`ProductName`,`ProductPrice`,`ProductShowImage`,`ProductRating`,`ProductDescription`"]).responseJSON { response in
+         //print(response.result.value)
+        }
+        
+    }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 8
@@ -150,7 +161,7 @@ class Page1ProductDetailViewController: UIViewController, UITableViewDataSource,
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        //loadJSON()
         // Do any additional setup after loading the view.
     }
 

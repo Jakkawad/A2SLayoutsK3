@@ -13,4 +13,5 @@ class Page1ProductAllCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var imageViewProduct: UIImageView!
     @IBOutlet weak var lblProductName: UILabel!
     @IBOutlet weak var lblProductPrice: UILabel!
+    @IBOutlet weak var imageViewRating:UIImageView!
 }

@@ -24,5 +24,5 @@ struct BaseCell {
 }
 
 struct BaseUrl {
-    static var a2sUrl = "https://www.all2sale.com/sendmail/testmail/testfunction/json/apitest.php"
+    static var a2sUrl = "https://www.all2sale.com/sendmail/testfunction/json/apitest.php"
 }

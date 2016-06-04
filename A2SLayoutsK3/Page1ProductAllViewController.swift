@@ -17,16 +17,37 @@ class Page1ProductAllViewController: UIViewController, UICollectionViewDataSourc
     
     private var numberOfItemPerSection = 16
     
-    var dataJSON = NSArray()
+    var products = [Product]()
     
     func loadJSON() {
-        Alamofire.request(.POST,"https://www.all2sale.com/sendmail/testfunction/json/apitest.php",parameters: ["api":"productall","productall":numberOfItemPerSection]).responseJSON { response in
+        /*
+        Alamofire.request(.POST,BaseUrl.a2sUrl,parameters: ["api":"productall","productall":numberOfItemPerSection]).responseJSON { response in
             //print(response.result)
             self.dataJSON = response.result.value as! NSArray
             //print(self.dataJSON.description)
             self.collectionView.reloadData()
             
         }
+        */
+        /*
+        Alamofire.request(.POST, BaseUrl.a2sUrl, parameters: ["api":"product_rand","product_rand":numberOfItemPerSection,"value":"`Id`,`ProductName`,`ProductPrice`,`ProductShowImage`,`ProductRating`"]).responseJSON { response in
+            //print(response.result.value)
+            let value = response.result.value
+            let json = JSON(value!)
+            for(index, object) in json {
+                let productID = object["Id"].stringValue
+                let productName = object["ProductName"].stringValue
+                let productImage = object["ProductShowImage"].stringValue
+                let productPrice = object["ProductPrice"].stringValue
+                let productRating = object["ProductRating"].stringValue
+                var imageUrl = urlStoreImage(productImage)
+                var imageRatingUrl = urlStoreImage(productRating)
+                self.products.append(Product(_id: productID, _name: productName, _image: imageUrl, _price: productPrice, _rating: imageRatingUrl))
+                self.collectionView.reloadData()
+            }
+
+        }
+        */
     }
     
 
@@ -34,14 +55,24 @@ class Page1ProductAllViewController: UIViewController, UICollectionViewDataSourc
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         //return 10
         //eturn self.dataJSON.count
-        return numberOfItemPerSection
+        //return numberOfItemPerSection
+        print(products.count)
+        return products.count
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let col0 = collectionView.dequeueReusableCellWithReuseIdentifier(BaseCell.collectCell0, forIndexPath: indexPath) as? Page1ProductAllCollectionViewCell
         let dummyImageURL = NSURL(string: dummyImage("176x176"))
-        col0?.imageViewProduct.setImageWithURL(dummyImageURL!)
-        col0?.lblProductName.text = dummyText()
+        let product:Product
+        
+        //col0?.imageViewProduct.setImageWithURL(dummyImageURL!)
+        product = products[indexPath.row]
+        //print(product)
+        col0?.lblProductName.text = product.productName
+        col0?.lblProductPrice.text = product.productPrice
+        col0?.imageViewProduct.setImageWithURL(product.productImage)
+        col0?.imageViewRating.setImageWithURL(product.productRating)
+
         return col0!
     }
     
@@ -54,8 +85,8 @@ class Page1ProductAllViewController: UIViewController, UICollectionViewDataSourc
         if ((scrollView.contentOffset.y + scrollView.frame.size.height) >= scrollView.contentSize.height) {
             numberOfItemPerSection += 9
             self.collectionView.reloadData()
-            print("numberOfItemPerSection = \(numberOfItemPerSection)")
-            
+            //print("numberOfItemPerSection = \(numberOfItemPerSection)")
+            loadJSON()
             /*
             loadJSON()
             if numberOfItemPerSection > 35 {
@@ -76,7 +107,7 @@ class Page1ProductAllViewController: UIViewController, UICollectionViewDataSourc
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        loadJSON()
         // Do any additional setup after loading the view.
     }
 

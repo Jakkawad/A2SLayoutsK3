@@ -23,6 +23,13 @@ func urlStoreImage(imageUrl:String) -> NSURL {
     return fullUrl!
 }
 
+func urlRatingImage(rating:String) -> NSURL {
+    var baseRating = "https://www.all2sale.com/img/star"+rating+".png"
+    
+    let fullUrl = NSURL(string: baseRating)
+    return fullUrl!
+}
+
 func dummyText() -> String {
     let baseText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec placerat porta tempus. Fusce non suscipit."
     

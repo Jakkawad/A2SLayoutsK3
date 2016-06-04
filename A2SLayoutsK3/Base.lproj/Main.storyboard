@@ -338,6 +338,7 @@
                                                             </view>
                                                             <connections>
                                                                 <outlet property="imageViewProduct" destination="XBP-ed-fko" id="DgC-pL-0sV"/>
+                                                                <outlet property="imageViewRating" destination="YAi-f5-P2X" id="Kls-Uh-dv2"/>
                                                                 <outlet property="lblProductName" destination="fwV-NO-4BT" id="24X-5A-iIR"/>
                                                                 <outlet property="lblProductPrice" destination="Ips-fx-y3X" id="YWe-hD-Mfu"/>
                                                                 <segue destination="c4d-0T-lnd" kind="push" id="JOK-jT-qbY"/>
@@ -420,25 +421,30 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="176" height="174"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OWo-uG-g8w">
-                                                    <rect key="frame" x="8" y="177" width="160" height="21"/>
+                                                    <rect key="frame" x="8" y="175" width="160" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iyp-K3-hNA">
-                                                    <rect key="frame" x="8" y="195" width="160" height="21"/>
+                                                    <rect key="frame" x="8" y="193" width="160" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="star0.png" translatesAutoresizingMaskIntoConstraints="NO" id="MzA-C8-tXE">
+                                                    <rect key="frame" x="8" y="210" width="102" height="22"/>
+                                                </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <outlet property="imageViewProduct" destination="PUf-GE-KKt" id="axh-kk-yjS"/>
+                                            <outlet property="imageViewRating" destination="MzA-C8-tXE" id="4vt-er-Hsi"/>
                                             <outlet property="lblProductName" destination="OWo-uG-g8w" id="5Jd-37-fJS"/>
                                             <outlet property="lblProductPrice" destination="Iyp-K3-hNA" id="JKd-G8-zne"/>
+                                            <segue destination="c4d-0T-lnd" kind="push" id="zmU-73-KI5"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -465,7 +471,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q3D-Tu-H9q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2105" y="-1511"/>
+            <point key="canvasLocation" x="2094" y="-1780"/>
         </scene>
         <!--Page1 Product Detail View Controller-->
         <scene sceneID="mNL-El-1oL">
@@ -859,6 +865,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="BKR-0v-TtL"/>
-        <segue reference="JOK-jT-qbY"/>
+        <segue reference="wmM-dT-HsE"/>
     </inferredMetricsTieBreakers>
 </document>
