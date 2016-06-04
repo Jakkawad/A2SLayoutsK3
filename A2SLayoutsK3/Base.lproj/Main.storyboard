@@ -99,15 +99,15 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="1589"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="menuCell0" rowHeight="120" id="LBk-kb-3rk" customClass="Page1CellMenu0TableViewCell" customModule="A2SLayoutsK3" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MenuCell0" rowHeight="120" id="LBk-kb-3rk" customClass="Page1CellMenu0TableViewCell" customModule="A2SLayoutsK3" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="92" width="600" height="120"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LBk-kb-3rk" id="ExS-sq-dhF">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="119.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wuj-xj-4yy">
-                                                    <rect key="frame" x="8" y="8" width="584" height="102.5"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wuj-xj-4yy">
+                                                    <rect key="frame" x="8" y="8" width="584" height="103.5"/>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
@@ -834,6 +834,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="BKR-0v-TtL"/>
-        <segue reference="JOK-jT-qbY"/>
+        <segue reference="4YB-Yb-boa"/>
     </inferredMetricsTieBreakers>
 </document>
