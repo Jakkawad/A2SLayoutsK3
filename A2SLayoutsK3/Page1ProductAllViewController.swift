@@ -29,7 +29,7 @@ class Page1ProductAllViewController: UIViewController, UICollectionViewDataSourc
             
         }
         */
-        /*
+        print(numberOfItemPerSection)
         Alamofire.request(.POST, BaseUrl.a2sUrl, parameters: ["api":"product_rand","product_rand":numberOfItemPerSection,"value":"`Id`,`ProductName`,`ProductPrice`,`ProductShowImage`,`ProductRating`"]).responseJSON { response in
             //print(response.result.value)
             let value = response.result.value
@@ -45,9 +45,9 @@ class Page1ProductAllViewController: UIViewController, UICollectionViewDataSourc
                 self.products.append(Product(_id: productID, _name: productName, _image: imageUrl, _price: productPrice, _rating: imageRatingUrl))
                 self.collectionView.reloadData()
             }
-
+            //self.collectionView.reloadData()
         }
-        */
+        
     }
     
 
@@ -56,7 +56,7 @@ class Page1ProductAllViewController: UIViewController, UICollectionViewDataSourc
         //return 10
         //eturn self.dataJSON.count
         //return numberOfItemPerSection
-        print(products.count)
+        print("products count = \(products.count)")
         return products.count
     }
     
@@ -78,15 +78,16 @@ class Page1ProductAllViewController: UIViewController, UICollectionViewDataSourc
     
     func scrollViewDidScroll(scrollView: UIScrollView) {
         let offsetY = scrollView.contentOffset.y
-        //print("offsetY\(offsetY)")
+        print("offsetY\(offsetY)")
         let contentHeight = scrollView.contentSize.height
-        //print("contentHeight\(contentHeight)")
+        print("contentHeight\(contentHeight)")
         //if offsetY > contentHeight - scrollView.frame.size.height {
         if ((scrollView.contentOffset.y + scrollView.frame.size.height) >= scrollView.contentSize.height) {
-            numberOfItemPerSection += 9
-            self.collectionView.reloadData()
+            numberOfItemPerSection += 6
+            print("PLUSS")
             //print("numberOfItemPerSection = \(numberOfItemPerSection)")
             loadJSON()
+            self.collectionView.reloadData()
             /*
             loadJSON()
             if numberOfItemPerSection > 35 {
@@ -108,6 +109,7 @@ class Page1ProductAllViewController: UIViewController, UICollectionViewDataSourc
     override func viewDidLoad() {
         super.viewDidLoad()
         loadJSON()
+        //self.collectionView.reloadData()
         // Do any additional setup after loading the view.
     }
 

@@ -18,8 +18,9 @@ class Page1ProductDetailViewController: UIViewController, UITableViewDataSource,
     
     
     func loadJSON() {
-        Alamofire.request(.POST, BaseUrl.a2sUrl, parameters: ["api":"product_detail_id","product_detail_id":ProductSelected.productId,"value":"`Id`,`ProductName`,`ProductPrice`,`ProductShowImage`,`ProductRating`,`ProductDescription`"]).responseJSON { response in
-         //print(response.result.value)
+        Alamofire.request(.POST, BaseUrl.a2sUrl, parameters: ["api":"product_detail_id","product_detail_id":ProductSelected.productId,"value":"`Id`,`ProductName`,`ProductPrice`,`ProductShowImage`,`ProductRating`"]).responseJSON { response in
+         print(response.result.value)
+        
         }
         
     }
@@ -161,7 +162,7 @@ class Page1ProductDetailViewController: UIViewController, UITableViewDataSource,
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //loadJSON()
+        loadJSON()
         // Do any additional setup after loading the view.
     }
 

@@ -8,8 +8,24 @@
 
 import UIKit
 
-class Page5ViewController: UIViewController {
+class Page5ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
+    @IBOutlet weak var tableView:UITableView!
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 3
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 3
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell0 = tableView.dequeueReusableCellWithIdentifier(BaseCell.tableCell0)
+        
+        return cell0!
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
