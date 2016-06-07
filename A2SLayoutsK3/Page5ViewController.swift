@@ -13,11 +13,24 @@ class Page5ViewController: UIViewController, UITableViewDataSource, UITableViewD
     @IBOutlet weak var tableView:UITableView!
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 3
+        return 5
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        //return 3
+        if section == 0 {
+            return 1
+        } else if section == 1 {
+            return 1
+        } else if section == 2 {
+            return 1
+        } else if section == 3 {
+            return 1
+        } else if section == 4 {
+            return 2
+        } else {
+            return 3
+        }
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -26,9 +39,22 @@ class Page5ViewController: UIViewController, UITableViewDataSource, UITableViewD
         return cell0!
     }
     
+    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if section == 0 {
+            return "Setting User"
+        } else if section == 1 {
+            return "Product Detail"
+        } else if section == 2 {
+            return "Review"
+        } else {
+            return "Other Product"
+        }
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        navigationController?.navigationBar.barTintColor = UIColor(red: 16/255, green: 132/255, blue: 142/255, alpha: 1.0)
+        self.title = "Setting"
         // Do any additional setup after loading the view.
     }
 

@@ -77,9 +77,17 @@ class Page1Cell0TableViewCell: UITableViewCell, UICollectionViewDataSource, UICo
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         //print(dataArray[indexPath.row])
-        var aa = dataArray[indexPath.row]
+        //var didSelectedProduct = dataArray[indexPath.row]
+        let item = dataArray[indexPath.row] as! NSDictionary
+        var productId = item.objectForKey("Id") as? String
+        var productName = item.objectForKey("ProductName") as? String
+        var productPrice = item.objectForKey("ProductPrice") as? String
+        var productImage = item.objectForKey("ProductShowImage") as? String
+        var productRating = item.objectForKey("ProductRating") as? String
+        //print(item.objectForKey("ProductName") as? String)
+        //print(productId)
         //print(aa)
-        ProductSelected.productArray = aa
+        //ProductSelected.productArray = aa
         //print(ProductSelected.productArray)
         //print(aa)
         //ProductSelected.productArray = aa

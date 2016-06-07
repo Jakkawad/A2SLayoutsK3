@@ -54,11 +54,11 @@
                         <viewControllerLayoutGuide type="bottom" id="WgL-T6-uU0"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Bbg-Zd-VcU">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="dXs-jE-ZVC">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="dXs-jE-ZVC">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="1000"/>
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="tableCell0" textLabel="jMb-33-mgm" style="IBUITableViewCellStyleDefault" id="arM-vl-2GS">
@@ -89,8 +89,16 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dXs-jE-ZVC" firstAttribute="top" secondItem="Bbg-Zd-VcU" secondAttribute="topMargin" id="Be6-70-myl"/>
+                            <constraint firstItem="dXs-jE-ZVC" firstAttribute="bottom" secondItem="Bbg-Zd-VcU" secondAttribute="bottomMargin" id="Dei-8Y-Npb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dXs-jE-ZVC" secondAttribute="trailing" constant="-20" id="IPo-S3-516"/>
+                            <constraint firstItem="dXs-jE-ZVC" firstAttribute="leading" secondItem="Bbg-Zd-VcU" secondAttribute="leadingMargin" constant="-20" id="QLv-R7-znR"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="bcI-5O-lCY"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="1000"/>
                     <connections>
                         <outlet property="tableView" destination="dXs-jE-ZVC" id="VC3-sp-XKV"/>
                     </connections>
@@ -108,7 +116,7 @@
                         <viewControllerLayoutGuide type="bottom" id="xbx-Cx-qzT"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="hJR-0R-928">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="me4-dK-ez4">
