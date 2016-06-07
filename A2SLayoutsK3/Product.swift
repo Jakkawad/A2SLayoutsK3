@@ -26,6 +26,8 @@ struct Product {
 
 struct ProductSelected {
     static var productId:String = ""
+    static var productArray:AnyObject!
+    //static var productArray:NSArray = []
 }
 /*
 struct ProductDetail {

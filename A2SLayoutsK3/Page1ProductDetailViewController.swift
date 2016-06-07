@@ -15,7 +15,9 @@ class Page1ProductDetailViewController: UIViewController, UITableViewDataSource,
 
     @IBOutlet weak var tableView:UITableView!
     
+    var productDetailArray = NSArray()
     
+    /*
     
     func loadJSON() {
         Alamofire.request(.POST, BaseUrl.a2sUrl, parameters: ["api":"product_detail_id","product_detail_id":ProductSelected.productId,"value":"`Id`,`ProductName`,`ProductPrice`,`ProductShowImage`,`ProductRating`"]).responseJSON { response in
@@ -24,7 +26,7 @@ class Page1ProductDetailViewController: UIViewController, UITableViewDataSource,
         }
         
     }
-    
+    */
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 8
     }
@@ -162,7 +164,11 @@ class Page1ProductDetailViewController: UIViewController, UITableViewDataSource,
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadJSON()
+        //print(ProductSelected.productArray)
+        //productDetailArray = (ProductSelected.productArray as? NSArray)!
+        //print(productDetailArray)
+        //print(productDetailArray)
+        //loadJSON()
         // Do any additional setup after loading the view.
     }
 
