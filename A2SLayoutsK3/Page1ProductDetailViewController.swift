@@ -164,7 +164,10 @@ class Page1ProductDetailViewController: UIViewController, UITableViewDataSource,
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //print(ProductSelected.productArray)
+        print(ProductSelected.productArray)
+        ProductSelected.productArray = productDetailArray as! NSArray
+        let item = productDetailArray as! NSDictionary
+        print(item.objectForKey("ProductName"))
         //productDetailArray = (ProductSelected.productArray as? NSArray)!
         //print(productDetailArray)
         //print(productDetailArray)

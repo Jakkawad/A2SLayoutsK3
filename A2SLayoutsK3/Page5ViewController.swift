@@ -13,7 +13,7 @@ class Page5ViewController: UIViewController, UITableViewDataSource, UITableViewD
     @IBOutlet weak var tableView:UITableView!
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 5
+        return 3
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -21,15 +21,11 @@ class Page5ViewController: UIViewController, UITableViewDataSource, UITableViewD
         if section == 0 {
             return 1
         } else if section == 1 {
-            return 1
-        } else if section == 2 {
-            return 1
-        } else if section == 3 {
-            return 1
-        } else if section == 4 {
-            return 2
-        } else {
             return 3
+        } else if section == 2 {
+            return 4
+        } else {
+            return 1
         }
     }
     
@@ -43,9 +39,9 @@ class Page5ViewController: UIViewController, UITableViewDataSource, UITableViewD
         if section == 0 {
             return "Setting User"
         } else if section == 1 {
-            return "Product Detail"
+            return "Customer Support"
         } else if section == 2 {
-            return "Review"
+            return "About"
         } else {
             return "Other Product"
         }
