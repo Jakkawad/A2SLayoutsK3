@@ -103,11 +103,14 @@ class Page1ProductDetailViewController: UIViewController, UITableViewDataSource,
             let cell5 = tableView.dequeueReusableCellWithIdentifier(BaseCell.tableCell5)
             return cell5!
         } else if indexPath.section == 6 {
-            let cell7 = tableView.dequeueReusableCellWithIdentifier(BaseCell.tableCell7)
+            let cell7 = tableView.dequeueReusableCellWithIdentifier(BaseCell.tableCell7) as? Page1ProductDetailCell7TableViewCell
+            let dummyImageURL = NSURL(string: dummyImage("80x80"))
+            cell7?.imageViewShop.setImageWithURL(dummyImageURL!)
+            
             return cell7!
         } else {
             //Other
-            let cell6 = tableView.dequeueReusableCellWithIdentifier(BaseCell.tableCell6)
+            let cell6 = tableView.dequeueReusableCellWithIdentifier(BaseCell.tableCell6) as? Page1ProductDetailCell6TableViewCell
             return cell6!
         }
     }
@@ -159,15 +162,30 @@ class Page1ProductDetailViewController: UIViewController, UITableViewDataSource,
     }
     
     func tableView(tableView: UITableView, shouldHighlightRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        return false
+        //return false
+        if indexPath.section == 0 {
+            return false
+        } else {
+            return true
+        }
     }
     
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if indexPath.section == 1 {
+            self.performSegueWithIdentifier("ProductDetailSeguePage1", sender: self)
+        } else if indexPath.section == 6 {
+            self.performSegueWithIdentifier("ShopSeguePage1", sender: self)
+        } else {
+            print("else")
+        }
+    }
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(ProductSelected.productArray)
-        ProductSelected.productArray = productDetailArray as! NSArray
-        let item = productDetailArray as! NSDictionary
-        print(item.objectForKey("ProductName"))
+        //print(ProductSelected.productArray)
+        //ProductSelected.productArray = productDetailArray as! NSArray
+        //let item = productDetailArray as! NSDictionary
+        //print(item.objectForKey("ProductName"))
         //productDetailArray = (ProductSelected.productArray as? NSArray)!
         //print(productDetailArray)
         //print(productDetailArray)

@@ -13,11 +13,13 @@ class Page5ViewController: UIViewController, UITableViewDataSource, UITableViewD
     @IBOutlet weak var tableView:UITableView!
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 3
+        //return 3
+        return 2
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //return 3
+        /*
         if section == 0 {
             return 1
         } else if section == 1 {
@@ -27,6 +29,13 @@ class Page5ViewController: UIViewController, UITableViewDataSource, UITableViewD
         } else {
             return 1
         }
+        */
+        //return 2
+        if section == 0 {
+            return 2
+        } else {
+            return 2
+        }
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -35,7 +44,41 @@ class Page5ViewController: UIViewController, UITableViewDataSource, UITableViewD
         return cell0!
     }
     
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        /*
+        switch indexPath.row {
+        case 0:
+            self.performSegueWithIdentifier("first", sender: self)
+            break
+        case 1:
+            self.performSegueWithIdentifier("second", sender: self)
+            break
+        default:
+            break
+        }
+        */
+        if indexPath.section == 0 {
+            print("DDD")
+            if indexPath.row == 0 {
+                self.performSegueWithIdentifier("first", sender: self)
+            } else {
+                self.performSegueWithIdentifier("second", sender: self)
+            }
+        } else {
+            print("CCC")
+            if indexPath.row == 0 {
+                self.performSegueWithIdentifier("third", sender: self)
+            } else {
+                self.performSegueWithIdentifier("fourth", sender: self)
+            }
+        }
+    }
+    
+    
+    
+    /*
     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        
         if section == 0 {
             return "Setting User"
         } else if section == 1 {
@@ -46,7 +89,13 @@ class Page5ViewController: UIViewController, UITableViewDataSource, UITableViewD
             return "Other Product"
         }
     }
-
+    */
+    /*
+    func tableView(tableView: UITableView, shouldHighlightRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return false
+    }
+    */
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.barTintColor = UIColor(red: 16/255, green: 132/255, blue: 142/255, alpha: 1.0)
