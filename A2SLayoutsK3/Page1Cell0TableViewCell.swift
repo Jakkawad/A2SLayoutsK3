@@ -74,7 +74,7 @@ class Page1Cell0TableViewCell: UITableViewCell, UICollectionViewDataSource, UICo
         */
         return col0!
     }
-    
+    /*
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         //print(dataArray[indexPath.row])
         var didSelectedProduct = dataArray[indexPath.row]
@@ -97,7 +97,7 @@ class Page1Cell0TableViewCell: UITableViewCell, UICollectionViewDataSource, UICo
         //print(aa)
         //ProductSelected.productArray = aa
     }
-    
+    */
     override func awakeFromNib() {
         super.awakeFromNib()
         loadJSON()

@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '1DDCAC6E5844BE983CBEE663'
-               BlueprintName = 'SwiftyJSON'
+               BlueprintIdentifier = 'FCC41ED79AA409755BF1DFC0'
+               BlueprintName = 'PageMenu'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'SwiftyJSON.framework'>
+               BuildableName = 'PageMenu.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

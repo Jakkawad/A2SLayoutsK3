@@ -5,5 +5,6 @@ target 'A2SLayoutsK3' do
 pod 'MapleBacon'
 pod 'Alamofire'
 pod 'SwiftyJSON'
+pod 'PageMenu'
 end
 
