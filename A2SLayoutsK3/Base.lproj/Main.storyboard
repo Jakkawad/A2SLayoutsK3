@@ -16,15 +16,100 @@
                         <viewControllerLayoutGuide type="bottom" id="nXz-Yd-3Rc"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="asD-wV-Cio">
-                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="mpL-oN-Ge7">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="tableCell0" id="ufs-PU-i9N">
+                                        <rect key="frame" x="0.0" y="114" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ufs-PU-i9N" id="R8L-eo-5IC">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gu3-k8-MAC">
+                                                    <rect key="frame" x="8" y="11" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="tableCell1" rowHeight="160" id="TLv-Yc-efS">
+                                        <rect key="frame" x="0.0" y="158" width="600" height="160"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TLv-Yc-efS" id="zJF-BM-SvI">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="159"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec placerat porta tempus. Fusce non suscipit." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="49N-ea-9dt">
+                                                    <rect key="frame" x="118" y="15" width="413" height="20"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Free" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qsf-Je-qbe">
+                                                    <rect key="frame" x="548" y="37" width="34" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TwW-bp-9mA">
+                                                    <rect key="frame" x="70" y="121" width="55" height="30"/>
+                                                    <state key="normal" title="Remove"/>
+                                                </button>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vhe-GS-K6t">
+                                                    <rect key="frame" x="10" y="8" width="100" height="100"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$1.03" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y1c-EG-73c">
+                                                    <rect key="frame" x="539" y="17" width="43" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z5v-OH-WjR">
+                                                    <rect key="frame" x="539" y="121" width="36" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Qty" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wAT-pk-P67">
+                                                    <rect key="frame" x="503" y="125" width="28" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qax-i9-bpy">
+                                                    <rect key="frame" x="252" y="121" width="96" height="30"/>
+                                                    <state key="normal" title="Save for Later"/>
+                                                </button>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="saq-Ta-Xhv" id="WyE-eH-BND"/>
+                                    <outlet property="delegate" destination="saq-Ta-Xhv" id="UtI-T1-7Xi"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mpL-oN-Ge7" firstAttribute="top" secondItem="asD-wV-Cio" secondAttribute="topMargin" id="Iev-CN-sPq"/>
+                            <constraint firstItem="mpL-oN-Ge7" firstAttribute="bottom" secondItem="asD-wV-Cio" secondAttribute="bottomMargin" id="Ih5-tB-Nk1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="mpL-oN-Ge7" secondAttribute="trailing" constant="-20" id="dc5-Oc-wTD"/>
+                            <constraint firstItem="mpL-oN-Ge7" firstAttribute="leading" secondItem="asD-wV-Cio" secondAttribute="leadingMargin" constant="-20" id="yaC-zk-OBw"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="AEP-eR-pfk"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fn3-pR-AgN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1491" y="901"/>
+            <point key="canvasLocation" x="1653" y="946"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="lep-Tr-pW3">
@@ -50,7 +135,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="92s-yj-b9c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2246" y="901"/>
+            <point key="canvasLocation" x="5066" y="365"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="unQ-nz-cpx">
@@ -82,7 +167,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oTM-xE-eBN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2903" y="901"/>
+            <point key="canvasLocation" x="5723" y="365"/>
         </scene>
         <!--Page3 View Controller-->
         <scene sceneID="zke-fC-RoD">
@@ -101,7 +186,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EMa-dh-Hmh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1471" y="1931"/>
+            <point key="canvasLocation" x="711" y="1739"/>
         </scene>
         <!--Page5 View Controller-->
         <scene sceneID="U2F-2l-gAe">
@@ -164,7 +249,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bE3-LY-gr3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1523" y="3048"/>
+            <point key="canvasLocation" x="1451" y="3296"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="SGm-mi-y3c">
@@ -335,7 +420,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nfd-fZ-mEr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="711" y="2368"/>
+            <point key="canvasLocation" x="711" y="2404"/>
         </scene>
         <!--Page1 View Controller-->
         <scene sceneID="boh-1y-NYr">
@@ -383,21 +468,21 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="สินค้ายอดนิยม" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wPA-XH-Oth">
-                                                    <rect key="frame" x="8" y="8" width="91" height="21"/>
+                                                    <rect key="frame" x="8" y="6" width="91" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dSG-YG-faF">
-                                                    <rect key="frame" x="514" y="7" width="78" height="24"/>
+                                                    <rect key="frame" x="514" y="5" width="78" height="24"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <state key="normal" title="แสดงทั้งหมด &gt;"/>
                                                     <connections>
                                                         <segue destination="rMd-Km-dDN" kind="push" id="BKR-0v-TtL"/>
                                                     </connections>
                                                 </button>
-                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="0D2-nq-QkY">
-                                                    <rect key="frame" x="0.0" y="23" width="600" height="200"/>
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="0D2-nq-QkY">
+                                                    <rect key="frame" x="0.0" y="22" width="600" height="200"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="VfY-pD-CdW">
                                                         <size key="itemSize" width="100" height="160"/>
@@ -467,8 +552,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="223"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="aIP-k9-vwe">
-                                                    <rect key="frame" x="0.0" y="23" width="600" height="200"/>
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="aIP-k9-vwe">
+                                                    <rect key="frame" x="0.0" y="22" width="600" height="200"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ext-ex-xtg">
                                                         <size key="itemSize" width="100" height="160"/>
@@ -516,7 +601,7 @@
                                                     </connections>
                                                 </collectionView>
                                                 <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aoE-gZ-w8X">
-                                                    <rect key="frame" x="512" y="6" width="78" height="24"/>
+                                                    <rect key="frame" x="512" y="7" width="78" height="24"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <state key="normal" title="แสดงทั้งหมด &gt;"/>
                                                     <connections>
@@ -524,7 +609,7 @@
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="สินค้ายอดนิยม" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mAV-fw-HUt">
-                                                    <rect key="frame" x="8" y="5" width="91" height="21"/>
+                                                    <rect key="frame" x="8" y="3" width="91" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -1080,7 +1165,7 @@
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X9k-j1-ZXD">
                                                     <rect key="frame" x="8" y="8" width="584" height="83"/>
-                                                    <mutableString key="text">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</mutableString>
+                                                    <string key="text">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
@@ -1296,10 +1381,10 @@
                     </tabBar>
                     <connections>
                         <segue destination="zzR-jJ-XPs" kind="relationship" relationship="viewControllers" id="S6g-wh-ES7"/>
-                        <segue destination="FlG-gs-dLF" kind="relationship" relationship="viewControllers" id="Mxa-Xt-KRb"/>
-                        <segue destination="sFm-uU-ihL" kind="relationship" relationship="viewControllers" id="7ot-fX-wqU"/>
-                        <segue destination="FLF-de-g8s" kind="relationship" relationship="viewControllers" id="eaN-Du-sJR"/>
-                        <segue destination="8zD-LL-gk8" kind="relationship" relationship="viewControllers" id="ZPQ-ac-Qbc"/>
+                        <segue destination="KA9-GR-6xd" kind="relationship" relationship="viewControllers" id="Ucw-Bh-dOQ"/>
+                        <segue destination="sFm-uU-ihL" kind="relationship" relationship="viewControllers" id="NIx-yJ-IFT"/>
+                        <segue destination="FLF-de-g8s" kind="relationship" relationship="viewControllers" id="tbs-Fx-CHR"/>
+                        <segue destination="8zD-LL-gk8" kind="relationship" relationship="viewControllers" id="xZ7-U4-tvZ"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cq8-XJ-hwq" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1342,34 +1427,33 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Jw-Qc-Gou" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="711" y="3048"/>
+            <point key="canvasLocation" x="711" y="3096"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="5gu-SX-oP9">
+        <scene sceneID="naJ-To-3b0">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FlG-gs-dLF" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="bookmarks" id="KNZ-BK-blQ"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KA9-GR-6xd" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="bookmarks" id="lZR-Ii-9RE"/>
                     <toolbarItems/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="UwI-J1-Znp">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zhq-od-xrH">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="saq-Ta-Xhv" kind="relationship" relationship="rootViewController" id="goI-oG-kUt"/>
+                        <segue destination="saq-Ta-Xhv" kind="relationship" relationship="rootViewController" id="Igi-vk-3w6"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1Np-dh-fwP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C4C-9k-p1k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="711" y="1085"/>
+            <point key="canvasLocation" x="711" y="1068"/>
         </scene>
     </scenes>
     <resources>
         <image name="star0.png" width="119" height="26"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="wmM-dT-HsE"/>
         <segue reference="BKR-0v-TtL"/>
-        <segue reference="zmU-73-KI5"/>
     </inferredMetricsTieBreakers>
 </document>

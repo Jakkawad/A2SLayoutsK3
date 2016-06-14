@@ -13,6 +13,7 @@
 		319C683A1D01DF4400FC3516 /* Page4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319C68391D01DF4400FC3516 /* Page4ViewController.swift */; };
 		319C683C1D01DF4900FC3516 /* Page5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319C683B1D01DF4900FC3516 /* Page5ViewController.swift */; };
 		6D5104CD928C4312AE460CA2 /* Pods_A2SLayoutsK3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52451CB050B3F632BE456594 /* Pods_A2SLayoutsK3.framework */; };
+		84574CF51D0FAE8D002D19B9 /* Page2PageMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84574CF41D0FAE8D002D19B9 /* Page2PageMenuViewController.swift */; };
 		84593C711CFFE04200B60777 /* Page1ProductAllViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84593C701CFFE04200B60777 /* Page1ProductAllViewController.swift */; };
 		84593C731CFFE31200B60777 /* Page1ProductAllCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84593C721CFFE31200B60777 /* Page1ProductAllCollectionViewCell.swift */; };
 		84593C7E1D00286200B60777 /* Page1ProductDetailCell6TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84593C7D1D00286200B60777 /* Page1ProductDetailCell6TableViewCell.swift */; };
@@ -57,6 +58,7 @@
 		319C683B1D01DF4900FC3516 /* Page5ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page5ViewController.swift; sourceTree = "<group>"; };
 		52451CB050B3F632BE456594 /* Pods_A2SLayoutsK3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_A2SLayoutsK3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A48A21E8494A97DAD8EE817 /* Pods-A2SLayoutsK3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-A2SLayoutsK3.release.xcconfig"; path = "Pods/Target Support Files/Pods-A2SLayoutsK3/Pods-A2SLayoutsK3.release.xcconfig"; sourceTree = "<group>"; };
+		84574CF41D0FAE8D002D19B9 /* Page2PageMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page2PageMenuViewController.swift; sourceTree = "<group>"; };
 		84593C701CFFE04200B60777 /* Page1ProductAllViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page1ProductAllViewController.swift; sourceTree = "<group>"; };
 		84593C721CFFE31200B60777 /* Page1ProductAllCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page1ProductAllCollectionViewCell.swift; sourceTree = "<group>"; };
 		84593C7D1D00286200B60777 /* Page1ProductDetailCell6TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page1ProductDetailCell6TableViewCell.swift; sourceTree = "<group>"; };
@@ -305,6 +307,7 @@
 			isa = PBXGroup;
 			children = (
 				319C68351D01DF3500FC3516 /* Page2ViewController.swift */,
+				84574CF41D0FAE8D002D19B9 /* Page2PageMenuViewController.swift */,
 			);
 			name = Page2;
 			sourceTree = "<group>";
@@ -530,6 +533,7 @@
 				8477A6F31CFECF230000BFEB /* Page1ProductDetailCell2TableViewCell.swift in Sources */,
 				8471062F1CFD7F0C003B5DD1 /* Page1ViewController.swift in Sources */,
 				8477A6F11CFECF180000BFEB /* Page1ProductDetailCell1TableViewCell.swift in Sources */,
+				84574CF51D0FAE8D002D19B9 /* Page2PageMenuViewController.swift in Sources */,
 				319C683C1D01DF4900FC3516 /* Page5ViewController.swift in Sources */,
 				8471062D1CFD7DD6003B5DD1 /* Page1Cell2TableViewCell.swift in Sources */,
 				8477A6EF1CFECF0E0000BFEB /* Page1ProductDetailCell0TableViewCell.swift in Sources */,

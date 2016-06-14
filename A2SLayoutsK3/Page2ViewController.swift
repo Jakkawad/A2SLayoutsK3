@@ -7,47 +7,60 @@
 //
 
 import UIKit
-import PageMenu
 
-class Page2ViewController: UIViewController {
+class Page2ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
-    var pageMenu:CAPSPageMenu?
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 2
+    }
     
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        //return 1
+        if section == 0 {
+            return 2
+        } else {
+            return 2
+        }
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        if indexPath.section == 0 {
+            if indexPath.row == 0 {
+                let cell0 = tableView.dequeueReusableCellWithIdentifier(BaseCell.tableCell0)
+                return cell0!
+            } else {
+                let cell1 = tableView.dequeueReusableCellWithIdentifier(BaseCell.tableCell1)
+                return cell1!
+            }
+        } else {
+            if indexPath.row == 0 {
+                let cell0 = tableView.dequeueReusableCellWithIdentifier(BaseCell.tableCell0)
+                return cell0!
+            } else {
+                let cell1 = tableView.dequeueReusableCellWithIdentifier(BaseCell.tableCell1)
+                return cell1!
+            }
+
+        }
+        //let cell0 = tableView.dequeueReusableCellWithIdentifier(BaseCell.tableCell0)
+        //return cell0!
+    }
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        if indexPath.section == 0 {
+            if indexPath.row == 0 {
+                return 44
+            } else {
+                return 160
+            }
+        } else {
+            return 30
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "PAGE MENU"
-        self.navigationController?.navigationBar.barTintColor = UIColor(red: 18/255.0, green: 137/255.0, blue: 142/255.0, alpha: 1.0)
-        self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
-        self.navigationController?.navigationBar.barStyle = UIBarStyle.Black
-        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.orangeColor()]
-        let mainStoryboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        var controllerArray:[UIViewController] = []
-        let controller1 = mainStoryboard.instantiateViewControllerWithIdentifier("Menu1Story")
-        controller1.title = "Menu1"
-        controllerArray.append(controller1)
-        
-        let controller2 = mainStoryboard.instantiateViewControllerWithIdentifier("Menu2Story")
-        controller2.title = "Menu2"
-        controllerArray.append(controller2)
-        
-        let parameters:[CAPSPageMenuOption] = [
-            .ScrollMenuBackgroundColor(UIColor(red: 18/255.0, green: 137/255.0, blue: 142/255.0, alpha: 1.0)),
-            .ViewBackgroundColor(UIColor(red: 20.0/255.0, green: 20.0/255.0, blue: 20.0/255.0, alpha: 1.0)),
-            .SelectionIndicatorColor(UIColor.orangeColor()),
-            .BottomMenuHairlineColor(UIColor(red: 70.0/255.0, green: 70.0/255.0, blue: 80.0/255.0, alpha: 1.0)),
-            .MenuItemFont(UIFont(name: "HelveticaNeue", size: 13.0)!),
-            .MenuHeight(40.0),
-            .MenuItemWidth(50.0),
-            .CenterMenuItems(true)
-        ]
-        pageMenu = CAPSPageMenu(viewControllers: controllerArray, frame: CGRectMake(0.0, 0.0, self.view.frame.width, self.view.frame.height), pageMenuOptions: parameters)
-        
-        self.addChildViewController(pageMenu!)
-        self.view.addSubview(pageMenu!.view)
-        
-        pageMenu!.didMoveToParentViewController(self)
+        self.title = "Cart"
         // Do any additional setup after loading the view.
     }
 
