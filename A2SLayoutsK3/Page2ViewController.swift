@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
+import MapleBacon
 
 class Page2ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
@@ -29,7 +32,9 @@ class Page2ViewController: UIViewController, UITableViewDataSource, UITableViewD
                 let cell0 = tableView.dequeueReusableCellWithIdentifier(BaseCell.tableCell0)
                 return cell0!
             } else {
-                let cell1 = tableView.dequeueReusableCellWithIdentifier(BaseCell.tableCell1)
+                let cell1 = tableView.dequeueReusableCellWithIdentifier(BaseCell.tableCell1) as? Page2Cell1TableViewCell
+                let dummyImageURL = NSURL(string: dummyImage("100x100"))
+                cell1?.imageViewProduct.setImageWithURL(dummyImageURL!)
                 return cell1!
             }
         } else {
@@ -37,7 +42,9 @@ class Page2ViewController: UIViewController, UITableViewDataSource, UITableViewD
                 let cell0 = tableView.dequeueReusableCellWithIdentifier(BaseCell.tableCell0)
                 return cell0!
             } else {
-                let cell1 = tableView.dequeueReusableCellWithIdentifier(BaseCell.tableCell1)
+                let cell1 = tableView.dequeueReusableCellWithIdentifier(BaseCell.tableCell1) as? Page2Cell1TableViewCell
+                let dummyImageURL = NSURL(string: dummyImage("100x100"))
+                cell1?.imageViewProduct.setImageWithURL(dummyImageURL!)
                 return cell1!
             }
 
@@ -54,9 +61,18 @@ class Page2ViewController: UIViewController, UITableViewDataSource, UITableViewD
                 return 160
             }
         } else {
-            return 30
+            if indexPath.row == 0 {
+                return 44
+            } else {
+                return 160
+            }
         }
     }
+    
+    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Shop Name"
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

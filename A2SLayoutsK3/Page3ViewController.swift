@@ -8,11 +8,28 @@
 
 import UIKit
 
-class Page3ViewController: UIViewController {
+class Page3ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
+    @IBOutlet weak var tableView:UITableView!
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell0 = tableView.dequeueReusableCellWithIdentifier(BaseCell.tableCell0) as? Page3Cell0TableViewCell
+        let dummyImageURL = NSURL(string: dummyImage("90x90"))
+        cell0?.imageViewProduct.setImageWithURL(dummyImageURL!)
+        return cell0!
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.title = "Notificatons"
         // Do any additional setup after loading the view.
     }
 

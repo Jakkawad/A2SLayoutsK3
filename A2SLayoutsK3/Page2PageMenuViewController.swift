@@ -17,7 +17,7 @@ class Page2PageMenuViewController: UIViewController {
         super.viewDidLoad()
 
         
-        self.title = "PAGE MENU"
+        self.title = "Cart"
         self.navigationController?.navigationBar.barTintColor = UIColor(red: 18/255.0, green: 137/255.0, blue: 142/255.0, alpha: 1.0)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
@@ -26,13 +26,13 @@ class Page2PageMenuViewController: UIViewController {
         let mainStoryboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         var controllerArray:[UIViewController] = []
         let controller1 = mainStoryboard.instantiateViewControllerWithIdentifier("Menu1Story")
-        controller1.title = "Menu1"
+        controller1.title = "In Cart"
         controllerArray.append(controller1)
         
         let controller2 = mainStoryboard.instantiateViewControllerWithIdentifier("Menu2Story")
-        controller2.title = "Menu2"
+        controller2.title = "Saved"
         controllerArray.append(controller2)
-        
+        /*
         let parameters:[CAPSPageMenuOption] = [
             .ScrollMenuBackgroundColor(UIColor(red: 18/255.0, green: 137/255.0, blue: 142/255.0, alpha: 1.0)),
             .ViewBackgroundColor(UIColor(red: 20.0/255.0, green: 20.0/255.0, blue: 20.0/255.0, alpha: 1.0)),
@@ -42,6 +42,16 @@ class Page2PageMenuViewController: UIViewController {
             .MenuHeight(40.0),
             .MenuItemWidth(50.0),
             .CenterMenuItems(true)
+        ]
+        */
+        let parameters:[CAPSPageMenuOption] = [
+            .ScrollMenuBackgroundColor(UIColor(red: 18/255.0, green: 137/255.0, blue: 142/255.0, alpha: 1.0)),
+            .ViewBackgroundColor(UIColor(red: 20.0/255.0, green: 20.0/255.0, blue: 20.0/255.0, alpha: 1.0)),
+            .SelectionIndicatorColor(UIColor.orangeColor()),
+            .BottomMenuHairlineColor(UIColor(red: 70.0/255.0, green: 70.0/255.0, blue: 80.0/255.0, alpha: 1.0)),
+            .MenuItemFont(UIFont(name: "HelveticaNeue", size: 13.0)!),
+            .MenuHeight(20),
+            .MenuItemWidth(176.0)
         ]
         pageMenu = CAPSPageMenu(viewControllers: controllerArray, frame: CGRectMake(0.0, 0.0, self.view.frame.width, self.view.frame.height), pageMenuOptions: parameters)
         

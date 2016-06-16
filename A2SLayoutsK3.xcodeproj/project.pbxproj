@@ -19,6 +19,8 @@
 		84593C7E1D00286200B60777 /* Page1ProductDetailCell6TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84593C7D1D00286200B60777 /* Page1ProductDetailCell6TableViewCell.swift */; };
 		84593C801D00286900B60777 /* Page1ProductDetailCell5TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84593C7F1D00286900B60777 /* Page1ProductDetailCell5TableViewCell.swift */; };
 		84593C821D0028A200B60777 /* Page1ProductDetailCell6CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84593C811D0028A200B60777 /* Page1ProductDetailCell6CollectionViewCell.swift */; };
+		8462B88D1D124F7200719666 /* Page2Cell1TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8462B88C1D124F7200719666 /* Page2Cell1TableViewCell.swift */; };
+		8462B88F1D12697B00719666 /* Page3Cell0TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8462B88E1D12697B00719666 /* Page3Cell0TableViewCell.swift */; };
 		846D1B4D1CFD82A90005EC00 /* Page1Cell0CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846D1B4C1CFD82A90005EC00 /* Page1Cell0CollectionViewCell.swift */; };
 		846D1B511CFD82D90005EC00 /* Page1Cell1CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846D1B501CFD82D90005EC00 /* Page1Cell1CollectionViewCell.swift */; };
 		846D1B531CFD82E10005EC00 /* Page1Cell2CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846D1B521CFD82E10005EC00 /* Page1Cell2CollectionViewCell.swift */; };
@@ -64,6 +66,8 @@
 		84593C7D1D00286200B60777 /* Page1ProductDetailCell6TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page1ProductDetailCell6TableViewCell.swift; sourceTree = "<group>"; };
 		84593C7F1D00286900B60777 /* Page1ProductDetailCell5TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page1ProductDetailCell5TableViewCell.swift; sourceTree = "<group>"; };
 		84593C811D0028A200B60777 /* Page1ProductDetailCell6CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page1ProductDetailCell6CollectionViewCell.swift; sourceTree = "<group>"; };
+		8462B88C1D124F7200719666 /* Page2Cell1TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page2Cell1TableViewCell.swift; sourceTree = "<group>"; };
+		8462B88E1D12697B00719666 /* Page3Cell0TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page3Cell0TableViewCell.swift; sourceTree = "<group>"; };
 		846D1B4C1CFD82A90005EC00 /* Page1Cell0CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page1Cell0CollectionViewCell.swift; sourceTree = "<group>"; };
 		846D1B501CFD82D90005EC00 /* Page1Cell1CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page1Cell1CollectionViewCell.swift; sourceTree = "<group>"; };
 		846D1B521CFD82E10005EC00 /* Page1Cell2CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page1Cell2CollectionViewCell.swift; sourceTree = "<group>"; };
@@ -308,6 +312,7 @@
 			children = (
 				319C68351D01DF3500FC3516 /* Page2ViewController.swift */,
 				84574CF41D0FAE8D002D19B9 /* Page2PageMenuViewController.swift */,
+				8462B88C1D124F7200719666 /* Page2Cell1TableViewCell.swift */,
 			);
 			name = Page2;
 			sourceTree = "<group>";
@@ -316,6 +321,7 @@
 			isa = PBXGroup;
 			children = (
 				319C68371D01DF3B00FC3516 /* Page3ViewController.swift */,
+				8462B88E1D12697B00719666 /* Page3Cell0TableViewCell.swift */,
 			);
 			name = Page3;
 			sourceTree = "<group>";
@@ -513,6 +519,7 @@
 				846D1B5B1CFD965C0005EC00 /* Page1ProductDetailViewController.swift in Sources */,
 				8471060D1CFD7398003B5DD1 /* ViewController.swift in Sources */,
 				8477A6ED1CFEAECC0000BFEB /* BaseCell.swift in Sources */,
+				8462B88D1D124F7200719666 /* Page2Cell1TableViewCell.swift in Sources */,
 				319C683A1D01DF4400FC3516 /* Page4ViewController.swift in Sources */,
 				846D1B4D1CFD82A90005EC00 /* Page1Cell0CollectionViewCell.swift in Sources */,
 				84F988AD1D0E579100F9C432 /* Page1ShopDetailViewController.swift in Sources */,
@@ -525,6 +532,7 @@
 				319C68361D01DF3500FC3516 /* Page2ViewController.swift in Sources */,
 				848AF9791D02836800A3B84A /* Product.swift in Sources */,
 				8477A6F71CFECF5A0000BFEB /* Page1ProductDetailCell3TableViewCell.swift in Sources */,
+				8462B88F1D12697B00719666 /* Page3Cell0TableViewCell.swift in Sources */,
 				8471060B1CFD7398003B5DD1 /* AppDelegate.swift in Sources */,
 				84F988B11D0E609200F9C432 /* Page1ShopDetailCell2TableViewCell.swift in Sources */,
 				84593C711CFFE04200B60777 /* Page1ProductAllViewController.swift in Sources */,
