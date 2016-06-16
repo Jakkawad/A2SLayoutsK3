@@ -346,7 +346,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bE3-LY-gr3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1495" y="3296"/>
+            <point key="canvasLocation" x="1495" y="3291"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="SGm-mi-y3c">
@@ -512,25 +512,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="180" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kks-ZZ-t8z">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="180" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kks-ZZ-t8z">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="180" id="dx0-Uk-eGx">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="tableCell0" rowHeight="180" id="dx0-Uk-eGx" customClass="Page4Cell0TableViewCell" customModule="A2SLayoutsK3" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="92" width="600" height="180"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dx0-Uk-eGx" id="tbc-y5-40K">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="179"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="svR-pO-Dyf">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="svR-pO-Dyf">
                                                     <rect key="frame" x="0.0" y="0.0" width="600" height="110"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="110" id="VAB-aE-qhA"/>
+                                                    </constraints>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cBT-45-Cqs">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cBT-45-Cqs">
                                                     <rect key="frame" x="23" y="57" width="100" height="100"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="100" id="34F-fg-AgN"/>
+                                                        <constraint firstAttribute="height" constant="100" id="Uj0-wi-TJi"/>
+                                                    </constraints>
                                                 </imageView>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="cBT-45-Cqs" firstAttribute="top" secondItem="tbc-y5-40K" secondAttribute="topMargin" constant="49" id="LIM-RP-xtR"/>
+                                                <constraint firstItem="svR-pO-Dyf" firstAttribute="top" secondItem="tbc-y5-40K" secondAttribute="topMargin" constant="-8" id="Lic-rS-Uah"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="svR-pO-Dyf" secondAttribute="trailing" constant="-8" id="WBj-xO-p3y"/>
+                                                <constraint firstItem="cBT-45-Cqs" firstAttribute="leading" secondItem="tbc-y5-40K" secondAttribute="leadingMargin" constant="15" id="c0D-Vu-cX9"/>
+                                                <constraint firstItem="svR-pO-Dyf" firstAttribute="leading" secondItem="tbc-y5-40K" secondAttribute="leadingMargin" constant="-8" id="myq-ho-hVZ"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="imageViewCover" destination="svR-pO-Dyf" id="lgM-SB-Pbe"/>
+                                            <outlet property="imageViewProfile" destination="cBT-45-Cqs" id="VrI-2q-rBC"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="EXx-QY-AQg">
                                         <rect key="frame" x="0.0" y="272" width="600" height="180"/>
@@ -541,9 +559,19 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="FLF-de-g8s" id="OAj-ES-O24"/>
+                                    <outlet property="delegate" destination="FLF-de-g8s" id="jw6-GM-Rfk"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="kks-ZZ-t8z" firstAttribute="bottom" secondItem="7s4-1O-0o1" secondAttribute="bottomMargin" id="EKy-KR-NnN"/>
+                            <constraint firstItem="kks-ZZ-t8z" firstAttribute="leading" secondItem="7s4-1O-0o1" secondAttribute="leadingMargin" constant="-20" id="S42-Hc-xHz"/>
+                            <constraint firstItem="kks-ZZ-t8z" firstAttribute="top" secondItem="7s4-1O-0o1" secondAttribute="topMargin" id="t6N-6v-JBE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kks-ZZ-t8z" secondAttribute="trailing" constant="-20" id="xCH-AN-Cdu"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Ol8-nK-sJ0"/>
                 </viewController>
@@ -1556,7 +1584,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Jw-Qc-Gou" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="711" y="3096"/>
+            <point key="canvasLocation" x="683" y="3091"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="naJ-To-3b0">

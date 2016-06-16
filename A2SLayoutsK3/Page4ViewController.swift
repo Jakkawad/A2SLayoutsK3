@@ -7,9 +7,37 @@
 //
 
 import UIKit
+import MapleBacon
+import Alamofire
+import SwiftyJSON
 
-class Page4ViewController: UIViewController {
+class Page4ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell0 = tableView.dequeueReusableCellWithIdentifier(BaseCell.tableCell0) as? Page4Cell0TableViewCell
+        let dummyImageURL = NSURL(string: dummyImage("100x100"))
+        let dummyImageURL2 = NSURL(string: dummyImage("375x110"))
+        cell0?.imageViewCover.setImageWithURL(dummyImageURL2!)
+        cell0?.imageViewProfile.setImageWithURL(dummyImageURL!)
+        return cell0!
+    }
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        if indexPath.row == 0 {
+            return 180
+        } else {
+            return 180
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
