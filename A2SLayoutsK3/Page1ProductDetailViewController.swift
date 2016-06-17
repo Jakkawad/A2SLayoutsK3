@@ -38,7 +38,7 @@ class Page1ProductDetailViewController: UIViewController, UITableViewDataSource,
         } else if section == 1 {
             return 1
         } else if section == 2 {
-            return 3
+            return 1
         } else if section == 3 {
             return 1
         } else if section == 4 {
@@ -121,7 +121,7 @@ class Page1ProductDetailViewController: UIViewController, UITableViewDataSource,
         } else if indexPath.section == 1 {
             return 100
         } else if indexPath.section == 2 {
-            return 100
+            return 176
         } else if indexPath.section == 3 {
             return 100
         } else if indexPath.section == 4 {

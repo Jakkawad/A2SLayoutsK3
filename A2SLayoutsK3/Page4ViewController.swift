@@ -18,16 +18,30 @@ class Page4ViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 2
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        /*
         let cell0 = tableView.dequeueReusableCellWithIdentifier(BaseCell.tableCell0) as? Page4Cell0TableViewCell
         let dummyImageURL = NSURL(string: dummyImage("100x100"))
         let dummyImageURL2 = NSURL(string: dummyImage("375x110"))
         cell0?.imageViewCover.setImageWithURL(dummyImageURL2!)
         cell0?.imageViewProfile.setImageWithURL(dummyImageURL!)
         return cell0!
+        */
+        if indexPath.row == 0 {
+            let cell0 = tableView.dequeueReusableCellWithIdentifier(BaseCell.tableCell0) as? Page4Cell0TableViewCell
+            let dummyImageURL = NSURL(string: dummyImage("100x100"))
+            let dummyImageURL2 = NSURL(string: dummyImage("375x110"))
+            cell0?.imageViewCover.setImageWithURL(dummyImageURL2!)
+            cell0?.imageViewProfile.setImageWithURL(dummyImageURL!)
+            return cell0!
+
+        } else {
+            let cell1 = tableView.dequeueReusableCellWithIdentifier(BaseCell.tableCell1)
+            return cell1!
+        }
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
