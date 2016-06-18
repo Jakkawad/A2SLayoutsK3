@@ -28,9 +28,17 @@ class Page1ProductDetailCell2TableViewCell: UITableViewCell, UITableViewDataSour
             return cell1!
         } else {
             let cell0 = tableView.dequeueReusableCellWithIdentifier(BaseCell.tableCell0) as? Page1ProductDetailCell2ReviewCell0TableViewCell
-            let dummyImageURL = NSURL(string: dummyImage("40x40"))
+            let dummyImageURL = NSURL(string: dummyImage("50x50"))
             cell0?.imageViewProfile.setImageWithURL(dummyImageURL!)
             return cell0!
+        }
+    }
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        if indexPath.row == 3 {
+            return 44
+        } else {
+            return 60
         }
     }
     override func awakeFromNib() {

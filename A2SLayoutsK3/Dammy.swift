@@ -24,7 +24,7 @@ func urlStoreImage(imageUrl:String) -> NSURL {
 }
 
 func urlRatingImage(rating:String) -> NSURL {
-    var baseRating = "https://www.all2sale.com/img/star"+rating+".png"
+    let baseRating = "https://www.all2sale.com/img/star"+rating+".png"
     
     let fullUrl = NSURL(string: baseRating)
     return fullUrl!

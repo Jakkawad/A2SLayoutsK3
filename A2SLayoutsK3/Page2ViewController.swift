@@ -73,6 +73,7 @@ class Page2ViewController: UIViewController, UITableViewDataSource, UITableViewD
         return "Shop Name"
     }
     
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         

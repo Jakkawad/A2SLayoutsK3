@@ -121,7 +121,7 @@ class Page1ProductDetailViewController: UIViewController, UITableViewDataSource,
         } else if indexPath.section == 1 {
             return 100
         } else if indexPath.section == 2 {
-            return 176
+            return 224
         } else if indexPath.section == 3 {
             return 100
         } else if indexPath.section == 4 {

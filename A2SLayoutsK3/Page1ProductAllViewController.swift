@@ -15,17 +15,30 @@ class Page1ProductAllViewController: UIViewController, UICollectionViewDataSourc
 
     @IBOutlet weak var collectionView: UICollectionView!
     
+    private let maximumNumberOfItems = 100
+    private let numberOfItemsToAdd = 10
+    private var numberOfItems = 10
+    
     private var numberOfItemPerSection = 16
     
     //var products = [Product]()
     var dataArray = NSArray()
     
     func loadJSON() {
-        
+        /*
         Alamofire.request(.POST,BaseUrl.a2sUrl,parameters: ["api":"product_rand","product_rand":numberOfItemPerSection,"value":"`Id`,`ProductName`,`ProductPrice`,`ProductShowImage`,`ProductRating`"]).responseJSON { response in
             //print(response.result)
             self.dataArray = response.result.value as! NSArray
             self.collectionView.reloadData()
+            
+        }
+        */
+        
+        Alamofire.request(.POST,BaseUrl.a2sUrl,parameters: ["api":"product_rand","product_rand":numberOfItems,"value":"`Id`,`ProductName`,`ProductPrice`,`ProductShowImage`,`ProductRating`"]).responseJSON { response in
+            //print(response.result)
+            self.dataArray = response.result.value as! NSArray
+            self.collectionView.reloadData()
+            //self.reloadData()
             
         }
         
@@ -34,12 +47,14 @@ class Page1ProductAllViewController: UIViewController, UICollectionViewDataSourc
 
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return dataArray.count
+        //return dataArray.count
+        return numberOfItems
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let col0 = collectionView.dequeueReusableCellWithReuseIdentifier(BaseCell.collectCell0, forIndexPath: indexPath) as? Page1ProductAllCollectionViewCell
         // NSArray
+        /*
         let item = dataArray[indexPath.row] as! NSDictionary
         let imageProductUrl = urlStoreImage((item.objectForKey("ProductShowImage") as? String)!)
         let imageRatingUrl = urlRatingImage((item.objectForKey("ProductRating") as? String)!)
@@ -47,6 +62,7 @@ class Page1ProductAllViewController: UIViewController, UICollectionViewDataSourc
         col0?.lblProductPrice.text = item.objectForKey("ProductPrice") as? String
         col0?.imageViewProduct.setImageWithURL(imageProductUrl)
         col0?.imageViewRating.setImageWithURL(imageRatingUrl)
+        */
         // Struct
         /*
         let dummyImageURL = NSURL(string: dummyImage("176x176"))
@@ -63,6 +79,10 @@ class Page1ProductAllViewController: UIViewController, UICollectionViewDataSourc
         return col0!
     }
     
+    func reloadData() {
+        collectionView.reloadData()
+    }
+    
     func scrollViewDidScroll(scrollView: UIScrollView) {
         let offsetY = scrollView.contentOffset.y
         //print("offsetY\(offsetY)")
@@ -70,13 +90,25 @@ class Page1ProductAllViewController: UIViewController, UICollectionViewDataSourc
         //print("contentHeight\(contentHeight)")
         //if offsetY > contentHeight - scrollView.frame.size.height {
         if ((scrollView.contentOffset.y + scrollView.frame.size.height) >= scrollView.contentSize.height) {
+            /*
             numberOfItemPerSection += 9
             //self.collectionView.reloadData()
             print("numberOfItemPerSection\(numberOfItemPerSection)")
             loadJSON()
+            */
+            numberOfItems += numberOfItemsToAdd
+            //collectionView.reloadData()
+            reloadData()
+            //loadJSON()
             
+            print("NumberOfItems = \(numberOfItems)")
+            if numberOfItems == 100 {
+                print("Out of RANG!!")
+            }
         }
     }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         loadJSON()
