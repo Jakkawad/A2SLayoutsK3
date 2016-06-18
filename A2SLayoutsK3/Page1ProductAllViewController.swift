@@ -36,7 +36,11 @@ class Page1ProductAllViewController: UIViewController, UICollectionViewDataSourc
         
         Alamofire.request(.POST,BaseUrl.a2sUrl,parameters: ["api":"product_rand","product_rand":numberOfItems,"value":"`Id`,`ProductName`,`ProductPrice`,`ProductShowImage`,`ProductRating`"]).responseJSON { response in
             //print(response.result)
-            self.dataArray = response.result.value as! NSArray
+            //self.dataArray = response.result.value as! NSArray
+            //self.dataArray += response.result.value as! NSArray
+            var json = response.result.value as! NSArray
+            //print(json)
+            self.dataArray = json
             self.collectionView.reloadData()
             //self.reloadData()
             
@@ -54,6 +58,9 @@ class Page1ProductAllViewController: UIViewController, UICollectionViewDataSourc
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let col0 = collectionView.dequeueReusableCellWithReuseIdentifier(BaseCell.collectCell0, forIndexPath: indexPath) as? Page1ProductAllCollectionViewCell
         // NSArray
+        
+        //let dummyImageURL = NSURL(string: dummyImage("176x176"))
+        col0?.imageViewProduct.setImageWithURL(NSURL(string: dummyImage("176x176"))!)
         /*
         let item = dataArray[indexPath.row] as! NSDictionary
         let imageProductUrl = urlStoreImage((item.objectForKey("ProductShowImage") as? String)!)
@@ -96,14 +103,21 @@ class Page1ProductAllViewController: UIViewController, UICollectionViewDataSourc
             print("numberOfItemPerSection\(numberOfItemPerSection)")
             loadJSON()
             */
+            /*
             numberOfItems += numberOfItemsToAdd
             //collectionView.reloadData()
             reloadData()
             //loadJSON()
-            
+            */
             print("NumberOfItems = \(numberOfItems)")
             if numberOfItems == 100 {
                 print("Out of RANG!!")
+            } else {
+                //print("<100")
+                numberOfItems += numberOfItemsToAdd
+                //loadJSON()
+                reloadData()
+
             }
         }
     }
