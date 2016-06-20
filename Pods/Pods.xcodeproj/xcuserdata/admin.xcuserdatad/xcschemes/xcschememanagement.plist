@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>IQKeyboardManager.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>MapleBacon.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -32,17 +37,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>030BDE4ADE2C44D58D658475710D2E81</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>21C461B0CAD90DE64B07A5D212C5F829</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>713713479D3CBFF7B051895F70A672C6</key>
+		<key>6DC487E06FAF868F44AA55A7BAACB864</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -53,6 +53,16 @@
 			<true/>
 		</dict>
 		<key>8EE2130E28914C9A846631C14A78F9F3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C3088D509DCC08B3E07004508CF0BCC0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FE45F4942B4FBD10C681CB15FF7F718B</key>
 		<dict>
 			<key>primary</key>
 			<true/>

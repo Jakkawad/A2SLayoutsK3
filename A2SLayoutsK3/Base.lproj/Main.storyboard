@@ -30,8 +30,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gu3-k8-MAC">
-                                                    <rect key="frame" x="8" y="11" width="42" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Shop Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gu3-k8-MAC">
+                                                    <rect key="frame" x="8" y="11" width="90" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -639,19 +639,11 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="สินค้ายอดนิยม" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wPA-XH-Oth">
-                                                    <rect key="frame" x="8" y="6" width="91" height="21"/>
+                                                    <rect key="frame" x="8" y="4" width="91" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dSG-YG-faF">
-                                                    <rect key="frame" x="514" y="5" width="78" height="24"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                    <state key="normal" title="แสดงทั้งหมด &gt;"/>
-                                                    <connections>
-                                                        <segue destination="rMd-Km-dDN" kind="push" id="BKR-0v-TtL"/>
-                                                    </connections>
-                                                </button>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="0D2-nq-QkY">
                                                     <rect key="frame" x="0.0" y="23" width="600" height="200"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -700,14 +692,22 @@
                                                         <outlet property="delegate" destination="rno-bU-jLX" id="4zq-b8-7hP"/>
                                                     </connections>
                                                 </collectionView>
+                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dSG-YG-faF">
+                                                    <rect key="frame" x="514" y="3" width="78" height="24"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <state key="normal" title="แสดงทั้งหมด &gt;"/>
+                                                    <connections>
+                                                        <segue destination="rMd-Km-dDN" kind="push" id="BKR-0v-TtL"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="dSG-YG-faF" firstAttribute="top" secondItem="ecn-fG-7a9" secondAttribute="topMargin" constant="-3" id="19F-si-Xdg"/>
-                                                <constraint firstItem="wPA-XH-Oth" firstAttribute="top" secondItem="ecn-fG-7a9" secondAttribute="topMargin" id="3v2-zZ-kGB"/>
-                                                <constraint firstItem="dSG-YG-faF" firstAttribute="trailing" secondItem="ecn-fG-7a9" secondAttribute="trailingMargin" id="5PR-bu-bPA"/>
+                                                <constraint firstItem="dSG-YG-faF" firstAttribute="top" secondItem="ecn-fG-7a9" secondAttribute="topMargin" constant="-5" id="5gY-Ev-mV7"/>
+                                                <constraint firstItem="wPA-XH-Oth" firstAttribute="top" secondItem="ecn-fG-7a9" secondAttribute="topMargin" constant="-4" id="Ad5-ap-2FS"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="0D2-nq-QkY" secondAttribute="trailing" constant="-8" id="DmW-k0-EzV"/>
+                                                <constraint firstItem="dSG-YG-faF" firstAttribute="trailing" secondItem="ecn-fG-7a9" secondAttribute="trailingMargin" id="Hb6-em-cX6"/>
+                                                <constraint firstItem="wPA-XH-Oth" firstAttribute="leading" secondItem="ecn-fG-7a9" secondAttribute="leadingMargin" id="HgT-pL-Ncq"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="0D2-nq-QkY" secondAttribute="bottom" constant="-8" id="hF0-bi-FBx"/>
-                                                <constraint firstItem="wPA-XH-Oth" firstAttribute="leading" secondItem="ecn-fG-7a9" secondAttribute="leadingMargin" id="lWq-DM-rIQ"/>
                                                 <constraint firstItem="0D2-nq-QkY" firstAttribute="leading" secondItem="ecn-fG-7a9" secondAttribute="leadingMargin" constant="-8" id="o2h-hi-7dn"/>
                                                 <constraint firstItem="0D2-nq-QkY" firstAttribute="top" secondItem="ecn-fG-7a9" secondAttribute="topMargin" constant="15" id="vUj-yN-KXb"/>
                                             </constraints>
@@ -729,14 +729,6 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aoE-gZ-w8X">
-                                                    <rect key="frame" x="514" y="2" width="78" height="24"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                    <state key="normal" title="แสดงทั้งหมด &gt;"/>
-                                                    <connections>
-                                                        <segue destination="rMd-Km-dDN" kind="push" id="cYJ-yg-3Mg"/>
-                                                    </connections>
-                                                </button>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="aIP-k9-vwe">
                                                     <rect key="frame" x="0.0" y="23" width="600" height="200"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -785,16 +777,24 @@
                                                         <outlet property="delegate" destination="IfV-DA-q58" id="8Ea-vl-azm"/>
                                                     </connections>
                                                 </collectionView>
+                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aoE-gZ-w8X">
+                                                    <rect key="frame" x="514" y="2" width="78" height="24"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <state key="normal" title="แสดงทั้งหมด &gt;"/>
+                                                    <connections>
+                                                        <segue destination="rMd-Km-dDN" kind="push" id="cYJ-yg-3Mg"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailingMargin" secondItem="aIP-k9-vwe" secondAttribute="trailing" constant="-8" id="4L4-jK-rUB"/>
                                                 <constraint firstItem="aIP-k9-vwe" firstAttribute="top" secondItem="hxP-k1-9ih" secondAttribute="topMargin" constant="14" id="5N4-7c-cPO"/>
-                                                <constraint firstItem="mAV-fw-HUt" firstAttribute="leading" secondItem="hxP-k1-9ih" secondAttribute="leadingMargin" id="MsN-RD-TzK"/>
-                                                <constraint firstItem="aoE-gZ-w8X" firstAttribute="trailing" secondItem="hxP-k1-9ih" secondAttribute="trailingMargin" id="Vd9-dv-s5R"/>
+                                                <constraint firstItem="aoE-gZ-w8X" firstAttribute="trailing" secondItem="hxP-k1-9ih" secondAttribute="trailingMargin" id="FV6-Kv-4A6"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="aIP-k9-vwe" secondAttribute="bottom" constant="-7" id="c9Q-QR-uFT"/>
-                                                <constraint firstItem="aoE-gZ-w8X" firstAttribute="top" secondItem="hxP-k1-9ih" secondAttribute="topMargin" constant="-6" id="dp3-xy-gEG"/>
+                                                <constraint firstItem="mAV-fw-HUt" firstAttribute="top" secondItem="hxP-k1-9ih" secondAttribute="topMargin" constant="-5" id="g3x-mS-xcp"/>
+                                                <constraint firstItem="aoE-gZ-w8X" firstAttribute="top" secondItem="hxP-k1-9ih" secondAttribute="topMargin" constant="-6" id="jD7-Od-id2"/>
                                                 <constraint firstItem="aIP-k9-vwe" firstAttribute="leading" secondItem="hxP-k1-9ih" secondAttribute="leadingMargin" constant="-8" id="o5c-1B-yMq"/>
-                                                <constraint firstItem="mAV-fw-HUt" firstAttribute="top" secondItem="hxP-k1-9ih" secondAttribute="topMargin" constant="-3" id="vFd-E5-v3Z"/>
+                                                <constraint firstItem="mAV-fw-HUt" firstAttribute="leading" secondItem="hxP-k1-9ih" secondAttribute="leadingMargin" id="z80-5f-EWJ"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -1299,6 +1299,9 @@
                                                     <rect key="frame" x="561" y="-1" width="31" height="23"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <state key="normal" title="All &gt;"/>
+                                                    <connections>
+                                                        <segue destination="rMd-Km-dDN" kind="push" id="QT6-Lu-UPA"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -1369,8 +1372,11 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="199"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O1O-42-md3">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="O1O-42-md3">
                                                     <rect key="frame" x="0.0" y="0.0" width="600" height="120"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="120" id="Kxd-Hb-waY"/>
+                                                    </constraints>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JZo-Vg-kAG">
                                                     <rect key="frame" x="43" y="169" width="46" height="30"/>
@@ -1389,9 +1395,9 @@
                                                 </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="O1O-42-md3" firstAttribute="top" secondItem="BXK-hG-z7l" secondAttribute="top" id="LbU-GD-gb9"/>
-                                                <constraint firstAttribute="trailing" secondItem="O1O-42-md3" secondAttribute="trailing" id="oYu-I4-Q3k"/>
-                                                <constraint firstItem="O1O-42-md3" firstAttribute="leading" secondItem="BXK-hG-z7l" secondAttribute="leading" id="zJB-Jh-uMj"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="O1O-42-md3" secondAttribute="trailing" constant="-8" id="VTj-2a-3Bf"/>
+                                                <constraint firstItem="O1O-42-md3" firstAttribute="top" secondItem="BXK-hG-z7l" secondAttribute="topMargin" constant="-8" id="jSe-7F-wEe"/>
+                                                <constraint firstItem="O1O-42-md3" firstAttribute="leading" secondItem="BXK-hG-z7l" secondAttribute="leadingMargin" constant="-8" id="vtT-5E-eC0"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -1472,6 +1478,7 @@
                                                                 <outlet property="imageViewRating" destination="4W2-nQ-pfo" id="AOE-WW-ZzP"/>
                                                                 <outlet property="lblProductName" destination="1gI-pJ-Dek" id="mo3-vv-CnN"/>
                                                                 <outlet property="lblProductPrice" destination="rWB-KO-kdR" id="dHE-cz-Fp7"/>
+                                                                <segue destination="c4d-0T-lnd" kind="push" id="eu7-Ir-JZh"/>
                                                             </connections>
                                                         </collectionViewCell>
                                                     </cells>
@@ -1503,7 +1510,7 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                                     <state key="normal" title="See All &gt;"/>
                                                     <connections>
-                                                        <segue destination="Gpr-Dw-mvR" kind="push" id="HtR-cb-E7R"/>
+                                                        <segue destination="rMd-Km-dDN" kind="push" id="CFB-gK-iyF"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -1563,7 +1570,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="lkN-uq-u8c">
-                                        <rect key="frame" x="10" y="74" width="176" height="240"/>
+                                        <rect key="frame" x="10" y="10" width="176" height="240"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="176" height="240"/>
@@ -1754,7 +1761,7 @@
         <image name="star0.png" width="119" height="26"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="cYJ-yg-3Mg"/>
-        <segue reference="wmM-dT-HsE"/>
+        <segue reference="eu7-Ir-JZh"/>
+        <segue reference="CFB-gK-iyF"/>
     </inferredMetricsTieBreakers>
 </document>

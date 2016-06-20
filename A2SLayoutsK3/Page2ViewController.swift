@@ -68,10 +68,11 @@ class Page2ViewController: UIViewController, UITableViewDataSource, UITableViewD
             }
         }
     }
-    
+    /*
     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return "Shop Name"
     }
+    */
     
         
     override func viewDidLoad() {

@@ -6,5 +6,6 @@ pod 'MapleBacon'
 pod 'Alamofire'
 pod 'SwiftyJSON'
 pod 'PageMenu'
+pod 'IQKeyboardManager'
 end
 

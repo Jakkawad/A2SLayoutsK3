@@ -17,13 +17,14 @@ class Page3ViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return 10
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell0 = tableView.dequeueReusableCellWithIdentifier(BaseCell.tableCell0) as? Page3Cell0TableViewCell
         let dummyImageURL = NSURL(string: dummyImage("90x90"))
         cell0?.imageViewProduct.setImageWithURL(dummyImageURL!)
+        
         return cell0!
     }
     override func viewDidLoad() {

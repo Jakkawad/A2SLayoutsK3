@@ -49,18 +49,22 @@ class Page1Cell0TableViewCell: UITableViewCell, UICollectionViewDataSource, UICo
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return dataArray.count
+        //return dataArray.count
+        return 8
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let col0 = collectionView.dequeueReusableCellWithReuseIdentifier(BaseCell.collectCell0, forIndexPath: indexPath) as? Page1Cell0CollectionViewCell
-        
+    
+        col0?.imageViewProduct.setImageWithURL(NSURL(string: dummyImage("100x100"))!)
+        /*
         // NSArray 
         let item = dataArray[indexPath.row] as! NSDictionary
         let imageProductUrl = urlStoreImage(item.objectForKey("ProductShowImage") as! String)
         col0?.lblProductName.text = item.objectForKey("ProductName") as? String
         col0?.lblProductPrice.text = item.objectForKey("ProductPrice") as? String
         col0?.imageViewProduct.setImageWithURL(imageProductUrl)
+        */
         // Struct
         /*
         let product:Product
@@ -100,7 +104,7 @@ class Page1Cell0TableViewCell: UITableViewCell, UICollectionViewDataSource, UICo
     */
     override func awakeFromNib() {
         super.awakeFromNib()
-        loadJSON()
+        //loadJSON()
         // Initialization code
     }
 

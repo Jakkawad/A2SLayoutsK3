@@ -1,17 +1,20 @@
 PODS:
   - Alamofire (3.4.0)
+  - IQKeyboardManager (4.0.3)
   - MapleBacon (2.0.8)
   - PageMenu (1.2.9)
   - SwiftyJSON (2.3.2)
 
 DEPENDENCIES:
   - Alamofire
+  - IQKeyboardManager
   - MapleBacon
   - PageMenu
   - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: c19a627cefd6a95f840401c49ab1f124e07f54ee
+  IQKeyboardManager: be9695ffc5a52077deb4847608f338771022d6d1
   MapleBacon: 32e3590e1730485b93f450283ff242f9444efc12
   PageMenu: ba19ff267f7a19e444e93c20a7847b78954a7011
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
