@@ -36,14 +36,15 @@ class Page1ProductAllViewController: UIViewController, UICollectionViewDataSourc
         
         Alamofire.request(.POST,BaseUrl.a2sUrl,parameters: ["api":"product_rand","product_rand":numberOfItems,"value":"`Id`,`ProductName`,`ProductPrice`,`ProductShowImage`,`ProductRating`"]).responseJSON { response in
             //print(response.result)
-            //self.dataArray = response.result.value as! NSArray
+            self.dataArray = response.result.value as! NSArray
             //self.dataArray += response.result.value as! NSArray
-            var json = response.result.value as! NSArray
+            //var json = response.result.value as! NSArray
             //print(json)
-            self.dataArray = json
+            //self.dataArray = json
             self.collectionView.reloadData()
             //self.reloadData()
-            
+            //print(self.dataArray)
+            print("DataArray Count = \(self.dataArray.count)")
         }
         
     }
@@ -51,8 +52,8 @@ class Page1ProductAllViewController: UIViewController, UICollectionViewDataSourc
 
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        //return dataArray.count
-        return numberOfItems
+        return dataArray.count
+        //return numberOfItems
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
@@ -61,7 +62,7 @@ class Page1ProductAllViewController: UIViewController, UICollectionViewDataSourc
         
         //let dummyImageURL = NSURL(string: dummyImage("176x176"))
         col0?.imageViewProduct.setImageWithURL(NSURL(string: dummyImage("176x176"))!)
-        /*
+        
         let item = dataArray[indexPath.row] as! NSDictionary
         let imageProductUrl = urlStoreImage((item.objectForKey("ProductShowImage") as? String)!)
         let imageRatingUrl = urlRatingImage((item.objectForKey("ProductRating") as? String)!)
@@ -69,7 +70,7 @@ class Page1ProductAllViewController: UIViewController, UICollectionViewDataSourc
         col0?.lblProductPrice.text = item.objectForKey("ProductPrice") as? String
         col0?.imageViewProduct.setImageWithURL(imageProductUrl)
         col0?.imageViewRating.setImageWithURL(imageRatingUrl)
-        */
+        
         // Struct
         /*
         let dummyImageURL = NSURL(string: dummyImage("176x176"))
@@ -115,7 +116,7 @@ class Page1ProductAllViewController: UIViewController, UICollectionViewDataSourc
             } else {
                 //print("<100")
                 numberOfItems += numberOfItemsToAdd
-                //loadJSON()
+                loadJSON()
                 reloadData()
 
             }

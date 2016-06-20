@@ -91,6 +91,7 @@
 		8471062A1CFD7DCA003B5DD1 /* Page1Cell1TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page1Cell1TableViewCell.swift; sourceTree = "<group>"; };
 		8471062C1CFD7DD6003B5DD1 /* Page1Cell2TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page1Cell2TableViewCell.swift; sourceTree = "<group>"; };
 		8471062E1CFD7F0C003B5DD1 /* Page1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page1ViewController.swift; sourceTree = "<group>"; };
+		84766B301D178FCE00316501 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		8477A6EC1CFEAECC0000BFEB /* BaseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCell.swift; sourceTree = "<group>"; };
 		8477A6EE1CFECF0E0000BFEB /* Page1ProductDetailCell0TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page1ProductDetailCell0TableViewCell.swift; sourceTree = "<group>"; };
 		8477A6F01CFECF180000BFEB /* Page1ProductDetailCell1TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page1ProductDetailCell1TableViewCell.swift; sourceTree = "<group>"; };
@@ -397,6 +398,7 @@
 		BCB31531D5322CC01554DC0E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				84766B301D178FCE00316501 /* QuartzCore.framework */,
 				52451CB050B3F632BE456594 /* Pods_A2SLayoutsK3.framework */,
 			);
 			name = Frameworks;
