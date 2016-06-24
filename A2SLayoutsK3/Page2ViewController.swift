@@ -13,12 +13,16 @@ import MapleBacon
 
 class Page2ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
+    @IBOutlet weak var tableView:UITableView!
+    
+    
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 2
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //return 1
+        
         if section == 0 {
             return 2
         } else {
@@ -32,6 +36,7 @@ class Page2ViewController: UIViewController, UITableViewDataSource, UITableViewD
                 let cell0 = tableView.dequeueReusableCellWithIdentifier(BaseCell.tableCell0)
                 return cell0!
             } else {
+                
                 let cell1 = tableView.dequeueReusableCellWithIdentifier(BaseCell.tableCell1) as? Page2Cell1TableViewCell
                 let dummyImageURL = NSURL(string: dummyImage("100x100"))
                 cell1?.imageViewProduct.setImageWithURL(dummyImageURL!)
@@ -79,6 +84,10 @@ class Page2ViewController: UIViewController, UITableViewDataSource, UITableViewD
         super.viewDidLoad()
         
         self.title = "Cart"
+        
+        
+        
+        
         // Do any additional setup after loading the view.
     }
 

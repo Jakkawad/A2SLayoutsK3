@@ -29,6 +29,54 @@ class Page1ProductAllViewController: UIViewController, UICollectionViewDataSourc
     //var products = [Product]()
     var dataArray = NSArray()
     
+    // Alamofire
+    var product:Array<ProductRands>?
+    var productRandWrapper:ProductRandWrapper?
+    var isLoadingProducts = false
+    
+    //
+    
+    func loadFirstProducts() {
+        isLoadingProducts = true
+        ProductRands.getProductRands({ (productRandWrapper, error) in
+            if error != nil {
+                let alert = UIAlertController(title: "Error", message: "Could not load first product \(error?.localizedDescription)", preferredStyle: UIAlertControllerStyle.Alert)
+                alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.Default, handler: nil))
+                self.presentViewController(alert, animated: true, completion: nil)
+            }
+            self.addProductsFromWrapper(productRandWrapper)
+            self.isLoadingProducts = false
+            self.collectionView.reloadData()
+        })
+    }
+    
+    func loadMoreProducts() {
+        self.isLoadingProducts = true
+        if self.product != nil && self.productRandWrapper != nil && self.product!.count < self.productRandWrapper!.count {
+            ProductRands.getMoreProductRands(self.productRandWrapper, completionHandler: { (moreWrapper, error) in
+                if error != nil {
+                    // TODO: improved error handling
+                    self.isLoadingProducts = false
+                    let alert = UIAlertController(title: "Error", message: "Could not load more species \(error?.localizedDescription)", preferredStyle: UIAlertControllerStyle.Alert)
+                    alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.Default, handler: nil))
+                }
+                print("got more!")
+                self.addProductsFromWrapper(moreWrapper)
+                self.isLoadingProducts = false
+                self.collectionView.reloadData()
+            })
+        }
+    }
+    
+    func addProductsFromWrapper(wrapper: ProductRandWrapper?) {
+        self.productRandWrapper = wrapper
+        if self.product == nil {
+            self.product = self.productRandWrapper?.product
+        } else if self.productRandWrapper != nil && self.productRandWrapper!.product != nil {
+            self.product = self.product! + self.productRandWrapper!.product!
+        }
+    }
+    
     func loadJSON() {
         /*
         Alamofire.request(.POST,BaseUrl.a2sUrl,parameters: ["api":"product_rand","product_rand":numberOfItemPerSection,"value":"`Id`,`ProductName`,`ProductPrice`,`ProductShowImage`,`ProductRating`"]).responseJSON { response in
@@ -58,7 +106,13 @@ class Page1ProductAllViewController: UIViewController, UICollectionViewDataSourc
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         //return dataArray.count
-        return numberOfItems
+        //return numberOfItems
+        if self.product == nil {
+            return 0
+        }
+        //print(product?.count)
+        return self.product!.count
+        
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
@@ -67,6 +121,24 @@ class Page1ProductAllViewController: UIViewController, UICollectionViewDataSourc
         
         //let dummyImageURL = NSURL(string: dummyImage("176x176"))
         col0?.imageViewProduct.setImageWithURL(NSURL(string: dummyImage("176x176"))!)
+        // SwiftyJSON
+        if self.product != nil && self.product!.count >= indexPath.row {
+            let product = self.product![indexPath.row]
+            col0?.lblProductName.text = product.productName
+            
+            // See if we need to load more product
+            let rowsToLoadFromBottom = 5
+            let rowsLoaded = self.product!.count
+            if (!self.isLoadingProducts && (indexPath.row >= (rowsLoaded - rowsToLoadFromBottom))) {
+                let totalRows = self.productRandWrapper!.count!
+                let remainingProductsToLoad = totalRows - rowsLoaded
+                if (remainingProductsToLoad > 0 ) {
+                    self.loadMoreProducts()
+                }
+            } 
+        }
+        
+        // NSDictionaty
         /*
         let item = dataArray[indexPath.row] as! NSDictionary
         let imageProductUrl = urlStoreImage((item.objectForKey("ProductShowImage") as? String)!)
@@ -96,7 +168,7 @@ class Page1ProductAllViewController: UIViewController, UICollectionViewDataSourc
     func reloadData() {
         collectionView.reloadData()
     }
-    
+    /*
     func scrollViewDidScroll(scrollView: UIScrollView) {
         /*
         let offsetY = scrollView.contentOffset.y
@@ -135,6 +207,7 @@ class Page1ProductAllViewController: UIViewController, UICollectionViewDataSourc
             //print("DADD")
             //numberOfItems += numberOfItemsToAdd
             //reloadData()
+            print("NumberOfItems = \(numberOfItems)")
             if numberOfItems == 100 {
                 print("Out of RANG!!")
             } else {
@@ -144,11 +217,12 @@ class Page1ProductAllViewController: UIViewController, UICollectionViewDataSourc
             }
         }
     }
-    
+    */
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadJSON()
+        //loadJSON()
+        loadFirstProducts()
         //self.collectionView.reloadData()
         // Do any additional setup after loading the view.
     }
