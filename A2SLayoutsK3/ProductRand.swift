@@ -22,7 +22,7 @@ enum ProductRandFields:String {
     case productName = "ProductName"
     case productPrice = "ProductPrice"
     case productShowImage = "ProductShowImage"
-    //case productRating = "ProductRating"
+    case productRating = "ProductRating"
     
 }
 
@@ -31,7 +31,7 @@ class ProductRands {
     var productName:String?
     var productPrice:String?
     var productShowImage:String?
-    //var productRating:String?
+    var productRating:String?
     
     
     required init(json:JSON, id:Int?) {
@@ -39,7 +39,7 @@ class ProductRands {
         self.productName = json[ProductRandFields.productName.rawValue].stringValue
         self.productPrice = json[ProductRandFields.productPrice.rawValue].stringValue
         self.productShowImage = json[ProductRandFields.productShowImage.rawValue].stringValue
-        //self.productRating = json[ProductRandFields.productRating.rawValue].stringValue
+        self.productRating = json[ProductRandFields.productRating.rawValue].stringValue
         
         // TODO: all field
     }
