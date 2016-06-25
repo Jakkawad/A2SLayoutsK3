@@ -22,6 +22,8 @@ enum ProductRandFields:String {
     case productName = "ProductName"
     case productPrice = "ProductPrice"
     case productShowImage = "ProductShowImage"
+    //case productRating = "ProductRating"
+    
 }
 
 class ProductRands {
@@ -29,6 +31,7 @@ class ProductRands {
     var productName:String?
     var productPrice:String?
     var productShowImage:String?
+    //var productRating:String?
     
     
     required init(json:JSON, id:Int?) {
@@ -36,12 +39,16 @@ class ProductRands {
         self.productName = json[ProductRandFields.productName.rawValue].stringValue
         self.productPrice = json[ProductRandFields.productPrice.rawValue].stringValue
         self.productShowImage = json[ProductRandFields.productShowImage.rawValue].stringValue
+        //self.productRating = json[ProductRandFields.productRating.rawValue].stringValue
+        
+        // TODO: all field
     }
     
     // MARK: Endpoints
     class func endpointForProductRands() -> String {
         //return "https://www.all2sale.com/sendmail/testfunction/json/apitest.php"
-        return "https://www.all2sale.com/rest/productall"
+        return "https://www.all2sale.com/rest/productall/?value=*"
+        //return "https://www.all2sale.com/rest/productall"
         //return "https://www.all2sale.com/rest/format_api_mobile.php?api=productall&page=2"
     }
     
@@ -91,11 +98,11 @@ extension Alamofire.Request {
                 wrapper.count = json["count"].intValue
                 
                 var allProductRands = [ProductRands]()
-                print(json)
+                //print("JSON = \(json)")
                 let results = json["results"]
-                print(results)
+                //print("Result = \(results)")
                 for jsonProductRands in results {
-                    print(jsonProductRands.1)
+                    print("JSONProductRand = \(jsonProductRands.1)")
                     let productRand = ProductRands(json: jsonProductRands.1, id: Int(jsonProductRands.0))
                     allProductRands.append(productRand)
                 }

@@ -17,6 +17,9 @@ class Page1ProductDetailViewController: UIViewController, UITableViewDataSource,
     
     var productDetailArray = NSArray()
     
+    //
+    var productDetail:ProductRands?
+    //
     /*
     
     func loadJSON() {
@@ -71,12 +74,13 @@ class Page1ProductDetailViewController: UIViewController, UITableViewDataSource,
          section 7
         Other
         */
+        
         if indexPath.section == 0 {
             //Image
             let cell0 = tableView.dequeueReusableCellWithIdentifier(BaseCell.tableCell0) as? Page1ProductDetailCell0TableViewCell
                 let dummyImageURL = NSURL(string: dummyImage("250x176"))
                 cell0?.imageViewProduct.setImageWithURL(dummyImageURL!)
-                cell0?.lblProductName.text = dummyText()
+                cell0?.lblProductName.text = productDetail?.productName
                 cell0?.lblProductPrice.text = dummyPrice()
             return cell0!
         } else if indexPath.section == 1 {
@@ -190,6 +194,8 @@ class Page1ProductDetailViewController: UIViewController, UITableViewDataSource,
         //print(productDetailArray)
         //print(productDetailArray)
         //loadJSON()
+        
+        
         // Do any additional setup after loading the view.
     }
 

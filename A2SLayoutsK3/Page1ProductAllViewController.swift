@@ -77,32 +77,24 @@ class Page1ProductAllViewController: UIViewController, UICollectionViewDataSourc
         }
     }
     
-    func loadJSON() {
-        /*
-        Alamofire.request(.POST,BaseUrl.a2sUrl,parameters: ["api":"product_rand","product_rand":numberOfItemPerSection,"value":"`Id`,`ProductName`,`ProductPrice`,`ProductShowImage`,`ProductRating`"]).responseJSON { response in
-            //print(response.result)
-            self.dataArray = response.result.value as! NSArray
-            self.collectionView.reloadData()
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "ProductDetailSegue" {
+            //print("segue")
+            let indexPath = self.collectionView.indexPathsForSelectedItems()?.first
+            //print(indexPath)
+            //let AA = self.mainArray[(indexPath?.row)!]
+            //print(AA)
+            let product = self.product![indexPath!.row]
             
-        }
-        */
-        
-        Alamofire.request(.POST,BaseUrl.a2sUrl,parameters: ["api":"product_rand","product_rand":"1","value":"`Id`,`ProductName`,`ProductPrice`,`ProductShowImage`,`ProductRating`"]).responseJSON { response in
-            //print(response.result)
-            self.dataArray = response.result.value as! NSArray
-            //self.dataArray += response.result.value as! NSArray
-            //var json = response.result.value as! NSArray
-            //print(json)
-            //self.dataArray = json
-            self.collectionView.reloadData()
-            //self.reloadData()
-            print(self.dataArray)
-            //print("DataArray Count = \(self.dataArray.count)")
-        }
-        
+            let destinationVC = segue.destinationViewController as? Page1ProductDetailViewController
+            destinationVC?.productDetail = product
+            //print(product)
+            //destinationVC?.productDetail = AA
+            //destinationVC?.title = "AAA"
+            //print(productDetail)
+        } 
     }
     
-
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         //return dataArray.count
@@ -125,6 +117,9 @@ class Page1ProductAllViewController: UIViewController, UICollectionViewDataSourc
         if self.product != nil && self.product!.count >= indexPath.row {
             let product = self.product![indexPath.row]
             col0?.lblProductName.text = product.productName
+            col0?.lblProductPrice.text = product.productPrice
+            //col0?.imageViewProduct.setImageWithURL(urlStoreImage(product.productShowImage!))
+            //col0?.imageViewRating.setImageWithURL(urlRatingImage(product.productRating!))
             
             // See if we need to load more product
             let rowsToLoadFromBottom = 5
@@ -168,62 +163,12 @@ class Page1ProductAllViewController: UIViewController, UICollectionViewDataSourc
     func reloadData() {
         collectionView.reloadData()
     }
-    /*
-    func scrollViewDidScroll(scrollView: UIScrollView) {
-        /*
-        let offsetY = scrollView.contentOffset.y
-        //print("offsetY\(offsetY)")
-        let contentHeight = scrollView.contentSize.height
-        //print("contentHeight\(contentHeight)")
-        //if offsetY > contentHeight - scrollView.frame.size.height {
-        if ((scrollView.contentOffset.y + scrollView.frame.size.height) >= scrollView.contentSize.height) {
-            /*
-            numberOfItemPerSection += 9
-            //self.collectionView.reloadData()
-            print("numberOfItemPerSection\(numberOfItemPerSection)")
-            loadJSON()
-            */
-            /*
-            numberOfItems += numberOfItemsToAdd
-            //collectionView.reloadData()
-            reloadData()
-            //loadJSON()
-            */
-            print("NumberOfItems = \(numberOfItems)")
-            if numberOfItems == 100 {
-                print("Out of RANG!!")
-            } else {
-                //print("<100")
-                numberOfItems += numberOfItemsToAdd
-                //loadJSON()
-                reloadData()
-
-            }
-        }
-        */
-        let currenOffset = scrollView.contentOffset.y
-        let maximumOffset = scrollView.contentSize.height - scrollView.frame.size.height
-        if maximumOffset - currenOffset <= 10.0 {
-            //print("DADD")
-            //numberOfItems += numberOfItemsToAdd
-            //reloadData()
-            print("NumberOfItems = \(numberOfItems)")
-            if numberOfItems == 100 {
-                print("Out of RANG!!")
-            } else {
-                numberOfItems += numberOfItemsToAdd
-                loadJSON()
-                reloadData()
-            }
-        }
-    }
-    */
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //loadJSON()
+        
         loadFirstProducts()
-        //self.collectionView.reloadData()
+        
         // Do any additional setup after loading the view.
     }
 
