@@ -94,6 +94,7 @@ class Page2ViewController: UIViewController, UITableViewDataSource, UITableViewD
             }
             
         })
+        
         // Do any additional setup after loading the view.
     }
 

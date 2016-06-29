@@ -63,6 +63,12 @@ class Page1ViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         //navigationController?.navigationBar.barTintColor = UIColor(red: 16/255, green: 132/255, blue: 142/255, alpha: 1.0)
         self.title = "All2Sale"
+        
+        //UIApplication.sharedApplication().applicationIconBadgeNumber = 1
+        /*
+        tabBarController?.tabBar.items?[4].badgeValue = "1"
+        tabBarController?.tabBar.items?.first?.badgeValue = "2nd"
+        */
         // Do any additional setup after loading the view.
     }
     

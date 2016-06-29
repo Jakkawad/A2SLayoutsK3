@@ -21,11 +21,6 @@ class Page1ProductAllViewController: UIViewController, UICollectionViewDataSourc
     
     //private var numberOfItemPerSection = 16
     
-    // Array
-    var arrayA = []
-    var arrayB = []
-    var arrayC = []
-    
     //var products = [Product]()
     var dataArray = NSArray()
     
@@ -36,6 +31,7 @@ class Page1ProductAllViewController: UIViewController, UICollectionViewDataSourc
     
     //
     
+        
     func loadFirstProducts() {
         isLoadingProducts = true
         ProductRands.getProductRands({ (productRandWrapper, error) in
@@ -160,9 +156,6 @@ class Page1ProductAllViewController: UIViewController, UICollectionViewDataSourc
         return col0!
     }
     
-    func reloadData() {
-        collectionView.reloadData()
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -17,6 +17,10 @@ struct BaseCell {
     static var tableCell5 = "tableCell5"
     static var tableCell6 = "tableCell6"
     static var tableCell7 = "tableCell7"
+    static var tableCell8 = "tableCell8"
+    static var tableCell9 = "tableCell9"
+    static var tableCell10 = "tableCell10"
+    
     
     static var collectCell0 = "collectCell0"
     
