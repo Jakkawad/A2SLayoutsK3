@@ -12,7 +12,7 @@ class Page1AddCareCell1TableViewCell: UITableViewCell, UITableViewDataSource, UI
 
     @IBOutlet weak var tableView:UITableView!
     
-    var sizeArray = []
+    var sizeArray = ["S", "M", "XL", "XXL"]
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
@@ -25,6 +25,7 @@ class Page1AddCareCell1TableViewCell: UITableViewCell, UITableViewDataSource, UI
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell0 = tableView.dequeueReusableCellWithIdentifier(BaseCell.tableCell0) as? Page1AddCareSizeTableViewCell
+        cell0?.lblName?.text = sizeArray[indexPath.row]
         return cell0!
     }
     override func awakeFromNib() {

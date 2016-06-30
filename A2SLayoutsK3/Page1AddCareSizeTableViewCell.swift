@@ -10,6 +10,8 @@ import UIKit
 
 class Page1AddCareSizeTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var lblName:UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

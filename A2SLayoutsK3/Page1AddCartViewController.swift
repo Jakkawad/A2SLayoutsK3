@@ -11,12 +11,14 @@ import UIKit
 class Page1AddCartViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 2
+        return 3
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //return 1
         if section == 0 {
+            return 1
+        } else if section == 1 {
             return 1
         } else {
             return 1
@@ -31,17 +33,36 @@ class Page1AddCartViewController: UIViewController, UITableViewDataSource, UITab
         if indexPath.section == 0 {
             let cell0 = tableView.dequeueReusableCellWithIdentifier(BaseCell.tableCell0) as? Page1AddCareCell0TableViewCell
             return cell0!
-        } else {
+        } else if indexPath.section == 1 {
             let cell1 = tableView.dequeueReusableCellWithIdentifier(BaseCell.tableCell1) as? Page1AddCareCell1TableViewCell
             return cell1!
+        } else {
+            let cell2 = tableView.dequeueReusableCellWithIdentifier(BaseCell.tableCell2)
+            return cell2!
         }
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         if indexPath.section == 0 {
-            return 220
+            let h:CGFloat = 44
+            let x:CGFloat = 5
+            return h * x
+        } else if indexPath.section == 1 {
+            let hh:CGFloat = 44
+            let xx:CGFloat = 4
+            return hh * xx
         } else {
-            return 220
+            return 200
+        }
+    }
+    
+    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if section == 0 {
+            return "Color"
+        } else if section == 1 {
+            return "Size"
+        } else {
+            return "Quality"
         }
     }
     override func viewDidLoad() {
