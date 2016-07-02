@@ -18,14 +18,17 @@ class ProductAllWrapper {
 }
 
 enum ProductAllFields:String {
+    case productId = "Id"
     case productName = "ProductName"
 }
 
 class ProductAlls {
     var productId:Int?
+    var productName:String?
     
     required init(json:JSON, id:Int?) {
-        self.productId = id
+        self.productId = json[ProductAllFields.productId.rawValue].intValue
+        self.productName = json[ProductAllFields.productName.rawValue].stringValue
     }
     // MARK: Endpoints
     class func endpointForProductAll() -> String {

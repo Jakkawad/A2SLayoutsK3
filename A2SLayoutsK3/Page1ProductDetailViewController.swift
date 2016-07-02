@@ -72,9 +72,11 @@ class Page1ProductDetailViewController: UIViewController, UITableViewDataSource,
             //Image
             let cell0 = tableView.dequeueReusableCellWithIdentifier(BaseCell.tableCell0) as? Page1ProductDetailCell0TableViewCell
                 let dummyImageURL = NSURL(string: dummyImage("250x176"))
-                cell0?.imageViewProduct.setImageWithURL(dummyImageURL!)
+                //cell0?.imageViewProduct.setImageWithURL(dummyImageURL!)
+                cell0?.imageViewProduct.setImageWithURL(urlStoreImage(productDetail!.productShowImage!))
                 cell0?.lblProductName.text = productDetail?.productName
                 cell0?.lblProductPrice.text = productDetail?.productPrice
+            //print(productDetail!.productId!)
             return cell0!
         } else if indexPath.section == 1 {
             //Description
@@ -186,15 +188,17 @@ class Page1ProductDetailViewController: UIViewController, UITableViewDataSource,
             return true
         }
     }
-    /*
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "OptionSegue" {
-            print("Option")
+        if segue.identifier == "ProductDetailSegue" {
+            //print("Option")
+            let destinationVC = segue.destinationViewController as? Page1ProductDetailProductDetailViewController
+            destinationVC!.productDetail = productDetail
         } else {
             print("Error")
         }
     }
-    */
+    
     /*
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         /*

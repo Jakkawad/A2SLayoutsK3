@@ -19,6 +19,7 @@ class Page1Cell0TableViewCell: UITableViewCell, UICollectionViewDataSource, UICo
 
     var dataArray = NSArray()
     
+    
     func loadJSON() {
         Alamofire.request(.POST, BaseUrl.a2sUrl, parameters: ["api":"product_rand","product_rand":"8","value":"`Id`,`ProductName`,`ProductPrice`,`ProductShowImage`,`ProductRating`"]).responseJSON { response in
             //print(response.result.value)

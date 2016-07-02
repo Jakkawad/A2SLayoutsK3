@@ -87,11 +87,7 @@ class Page2ViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         
         ProductRands.getProductRands({ (productRandWrapper, error) in
-            if error != nil {
-                let alert = UIAlertController(title: "Error", message: "Could not load first product \(error?.localizedDescription)", preferredStyle: UIAlertControllerStyle.Alert)
-                alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.Default, handler: nil))
-                self.presentViewController(alert, animated: true, completion: nil)
-            }
+            
             
         })
         

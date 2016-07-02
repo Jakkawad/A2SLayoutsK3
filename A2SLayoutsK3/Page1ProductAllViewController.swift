@@ -116,6 +116,7 @@ class Page1ProductAllViewController: UIViewController, UICollectionViewDataSourc
             col0?.lblProductPrice.text = product.productPrice
             col0?.imageViewProduct.setImageWithURL(urlStoreImage(product.productShowImage!))
             col0?.imageViewRating.setImageWithURL(urlRatingImage(product.productRating!))
+            //print(product.productRating)
             
             // See if we need to load more product
             let rowsToLoadFromBottom = 5

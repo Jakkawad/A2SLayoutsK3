@@ -1076,6 +1076,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="lblProductDescription" destination="8pq-Fy-6jL" id="9df-E5-Sse"/>
+                                            <segue destination="9SH-n2-Kt4" kind="push" identifier="ProductDetailSegue" id="H89-hi-TKD"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="tableCell8" rowHeight="224" id="2ab-LL-zUv" customClass="Page1ProductDetailCell8TableViewCell" customModule="A2SLayoutsK3" customModuleProvider="target">
@@ -1260,6 +1261,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="JFf-SW-ZAu" kind="push" id="ytc-Tb-9xr"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="tableCell4" rowHeight="100" id="YFR-8h-aIx">
                                         <rect key="frame" x="0.0" y="890" width="600" height="100"/>
@@ -1424,7 +1428,6 @@
                     <connections>
                         <outlet property="tableView" destination="Zhi-Re-bb0" id="BdC-Ia-wiY"/>
                         <segue destination="uxX-xC-fjx" kind="push" identifier="ShopSeguePage1" id="raD-on-tTh"/>
-                        <segue destination="9SH-n2-Kt4" kind="push" identifier="ProductDetailSeguePage1" id="ekN-Tr-EcH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="onc-7S-pMx" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1785,7 +1788,7 @@
                                             <outlet property="tableView" destination="WEF-To-UqO" id="KyC-Kj-8od"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="tableCell2" rowHeight="200" id="zdA-it-18w">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="tableCell2" rowHeight="200" id="zdA-it-18w" customClass="Page1AddCartCell2TableViewCell" customModule="A2SLayoutsK3" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="490" width="600" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zdA-it-18w" id="VkR-Gt-G9h">
@@ -1933,10 +1936,10 @@
             </objects>
             <point key="canvasLocation" x="1796" y="-3174"/>
         </scene>
-        <!--View Controller-->
+        <!--Page1 Product Detail Product Detail View Controller-->
         <scene sceneID="BBv-A5-JdV">
             <objects>
-                <viewController id="9SH-n2-Kt4" sceneMemberID="viewController">
+                <viewController id="9SH-n2-Kt4" customClass="Page1ProductDetailProductDetailViewController" customModule="A2SLayoutsK3" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1d8-m4-1BO"/>
                         <viewControllerLayoutGuide type="bottom" id="aYg-wd-vdg"/>
@@ -1945,22 +1948,69 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uut-Qn-JfO">
-                                <rect key="frame" x="46" y="192" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tM7-u8-syP">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="9SH-n2-Kt4" id="Smw-6o-ZmQ"/>
+                                </connections>
+                            </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="tM7-u8-syP" secondAttribute="trailing" constant="-20" id="FtM-ED-A1n"/>
+                            <constraint firstItem="aYg-wd-vdg" firstAttribute="top" secondItem="tM7-u8-syP" secondAttribute="bottom" id="JTG-QR-rJV"/>
+                            <constraint firstItem="tM7-u8-syP" firstAttribute="leading" secondItem="SVF-lR-psb" secondAttribute="leadingMargin" constant="-20" id="O8D-3c-4pC"/>
+                            <constraint firstItem="tM7-u8-syP" firstAttribute="top" secondItem="SVF-lR-psb" secondAttribute="topMargin" id="SUm-Tb-54e"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="mmM-Oq-NxT"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="600" height="600"/>
+                    <connections>
+                        <outlet property="webView" destination="tM7-u8-syP" id="G7K-Df-ZRo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EGz-9l-ZhR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1788" y="-2108"/>
+        </scene>
+        <!--Page1 Product Detail Payment View Controller-->
+        <scene sceneID="ct3-HB-913">
+            <objects>
+                <viewController id="JFf-SW-ZAu" customClass="Page1ProductDetailPaymentViewController" customModule="A2SLayoutsK3" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="igL-rx-MVg"/>
+                        <viewControllerLayoutGuide type="bottom" id="syb-kN-NXE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hJ4-CS-mun">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TJE-zO-epB">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="JFf-SW-ZAu" id="kW6-f7-bPk"/>
+                                </connections>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="TJE-zO-epB" firstAttribute="leading" secondItem="hJ4-CS-mun" secondAttribute="leadingMargin" constant="-20" id="4D9-4J-OFT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="TJE-zO-epB" secondAttribute="trailing" constant="-20" id="OeK-Jh-9eL"/>
+                            <constraint firstItem="syb-kN-NXE" firstAttribute="top" secondItem="TJE-zO-epB" secondAttribute="bottom" id="tqK-rF-V5o"/>
+                            <constraint firstItem="TJE-zO-epB" firstAttribute="top" secondItem="hJ4-CS-mun" secondAttribute="topMargin" id="w4O-si-FWq"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="l3q-eE-68T"/>
+                    <connections>
+                        <outlet property="webView" destination="TJE-zO-epB" id="ht3-eX-mME"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wOq-xZ-LZv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2431" y="-2108"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="CMv-h9-jwj">

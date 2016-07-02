@@ -35,7 +35,7 @@ class ProductRands {
     
     
     required init(json:JSON, id:Int?) {
-        self.productId = id
+        self.productId = json[ProductRandFields.productId.rawValue].int
         self.productName = json[ProductRandFields.productName.rawValue].stringValue
         self.productPrice = json[ProductRandFields.productPrice.rawValue].stringValue
         self.productShowImage = json[ProductRandFields.productShowImage.rawValue].stringValue
@@ -104,6 +104,9 @@ extension Alamofire.Request {
                 for jsonProductRands in results {
                     print("JSONProductRand = \(jsonProductRands.1)")
                     let productRand = ProductRands(json: jsonProductRands.1, id: Int(jsonProductRands.0))
+                    if productRand.productRating == "" {
+                        productRand.productRating = "0"
+                    } 
                     allProductRands.append(productRand)
                 }
                 wrapper.product = allProductRands

@@ -39,7 +39,7 @@ class Page1AddCartViewController: UIViewController, UITableViewDataSource, UITab
             let cell1 = tableView.dequeueReusableCellWithIdentifier(BaseCell.tableCell1) as? Page1AddCartCell1TableViewCell
             return cell1!
         } else if indexPath.section == 2 {
-            let cell2 = tableView.dequeueReusableCellWithIdentifier(BaseCell.tableCell2)
+            let cell2 = tableView.dequeueReusableCellWithIdentifier(BaseCell.tableCell2) as? Page1AddCartCell2TableViewCell
             return cell2!
         } else {
             let cell3 = tableView.dequeueReusableCellWithIdentifier(BaseCell.tableCell3) as? Page1AddCartCell3TableViewCell
