@@ -1,14 +1,14 @@
 //
-//  Page1AddCareCell1TableViewCell.swift
+//  Page1AddCartCell1TableViewCell.swift
 //  A2SLayoutsK3
 //
-//  Created by admin on 6/29/2559 BE.
+//  Created by admin on 7/2/2559 BE.
 //  Copyright © 2559 All2Sale. All rights reserved.
 //
 
 import UIKit
 
-class Page1AddCareCell1TableViewCell: UITableViewCell, UITableViewDataSource, UITableViewDelegate {
+class Page1AddCartCell1TableViewCell: UITableViewCell, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var tableView:UITableView!
     
@@ -24,10 +24,11 @@ class Page1AddCareCell1TableViewCell: UITableViewCell, UITableViewDataSource, UI
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell0 = tableView.dequeueReusableCellWithIdentifier(BaseCell.tableCell0) as? Page1AddCareSizeTableViewCell
+        let cell0 = tableView.dequeueReusableCellWithIdentifier(BaseCell.tableCell0) as? Page1AddCartSizeTableViewCell
         cell0?.lblName?.text = sizeArray[indexPath.row]
         return cell0!
     }
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

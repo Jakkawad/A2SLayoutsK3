@@ -1,14 +1,14 @@
 //
-//  Page1AddCareSizeTableViewCell.swift
+//  Page1AddCartColorTableViewCell.swift
 //  A2SLayoutsK3
 //
-//  Created by admin on 6/29/2559 BE.
+//  Created by admin on 7/2/2559 BE.
 //  Copyright © 2559 All2Sale. All rights reserved.
 //
 
 import UIKit
 
-class Page1AddCareSizeTableViewCell: UITableViewCell {
+class Page1AddCartColorTableViewCell: UITableViewCell {
 
     @IBOutlet weak var lblName:UILabel!
     

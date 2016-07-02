@@ -10,8 +10,10 @@ import UIKit
 
 class Page1AddCartViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
+    let rowHeight:CGFloat = 44
+    
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 3
+        return 4
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -31,28 +33,33 @@ class Page1AddCartViewController: UIViewController, UITableViewDataSource, UITab
         return cell0!
         */
         if indexPath.section == 0 {
-            let cell0 = tableView.dequeueReusableCellWithIdentifier(BaseCell.tableCell0) as? Page1AddCareCell0TableViewCell
+            let cell0 = tableView.dequeueReusableCellWithIdentifier(BaseCell.tableCell0) as? Page1AddCartCell0TableViewCell
             return cell0!
         } else if indexPath.section == 1 {
-            let cell1 = tableView.dequeueReusableCellWithIdentifier(BaseCell.tableCell1) as? Page1AddCareCell1TableViewCell
+            let cell1 = tableView.dequeueReusableCellWithIdentifier(BaseCell.tableCell1) as? Page1AddCartCell1TableViewCell
             return cell1!
-        } else {
+        } else if indexPath.section == 2 {
             let cell2 = tableView.dequeueReusableCellWithIdentifier(BaseCell.tableCell2)
             return cell2!
+        } else {
+            let cell3 = tableView.dequeueReusableCellWithIdentifier(BaseCell.tableCell3) as? Page1AddCartCell3TableViewCell
+            return cell3!
         }
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         if indexPath.section == 0 {
-            let h:CGFloat = 44
+            //let h:CGFloat = 44
             let x:CGFloat = 5
-            return h * x
+            return rowHeight * x
         } else if indexPath.section == 1 {
-            let hh:CGFloat = 44
+            //let hh:CGFloat = 44
             let xx:CGFloat = 4
-            return hh * xx
-        } else {
+            return rowHeight * xx
+        } else if indexPath.section == 2 {
             return 200
+        } else {
+            return rowHeight
         }
     }
     
@@ -61,8 +68,10 @@ class Page1AddCartViewController: UIViewController, UITableViewDataSource, UITab
             return "Color"
         } else if section == 1 {
             return "Size"
-        } else {
+        } else if section == 2 {
             return "Quality"
+        } else {
+            return ""
         }
     }
     override func viewDidLoad() {
