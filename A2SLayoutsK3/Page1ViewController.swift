@@ -58,6 +58,14 @@ class Page1ViewController: UIViewController, UITableViewDataSource, UITableViewD
         return false
     }
 
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "ProductDetailSegue1" {
+            print("ProductDetailSegue1")
+            
+        } else {
+            "Error"
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         

@@ -700,7 +700,7 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <state key="normal" title="แสดงทั้งหมด &gt;"/>
                                                     <connections>
-                                                        <segue destination="rMd-Km-dDN" kind="push" id="BKR-0v-TtL"/>
+                                                        <segue destination="rMd-Km-dDN" kind="push" identifier="ProductDetailSegue1" id="BKR-0v-TtL"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -785,7 +785,7 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <state key="normal" title="แสดงทั้งหมด &gt;"/>
                                                     <connections>
-                                                        <segue destination="rMd-Km-dDN" kind="push" id="cYJ-yg-3Mg"/>
+                                                        <segue destination="rMd-Km-dDN" kind="push" identifier="ProductDetailSegue2" id="cYJ-yg-3Mg"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -854,7 +854,7 @@
                                                                 <outlet property="imageViewRating" destination="YAi-f5-P2X" id="Kls-Uh-dv2"/>
                                                                 <outlet property="lblProductName" destination="fwV-NO-4BT" id="24X-5A-iIR"/>
                                                                 <outlet property="lblProductPrice" destination="Ips-fx-y3X" id="YWe-hD-Mfu"/>
-                                                                <segue destination="c4d-0T-lnd" kind="push" id="JOK-jT-qbY"/>
+                                                                <segue destination="c4d-0T-lnd" kind="push" identifier="ProductDetailSegue3" id="JOK-jT-qbY"/>
                                                             </connections>
                                                         </collectionViewCell>
                                                     </cells>
@@ -924,7 +924,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectCell0" id="HSu-En-4CF" customClass="Page1ProductAllCollectionViewCell" customModule="A2SLayoutsK3" customModuleProvider="target">
-                                        <rect key="frame" x="10" y="10" width="176" height="240"/>
+                                        <rect key="frame" x="10" y="74" width="176" height="240"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="176" height="240"/>
@@ -998,12 +998,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="1600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="Zhi-Re-bb0">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="Zhi-Re-bb0">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="1600"/>
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="tableCell0" rowHeight="240" id="LdS-Jd-Ehc" customClass="Page1ProductDetailCell0TableViewCell" customModule="A2SLayoutsK3" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="600" height="240"/>
+                                        <rect key="frame" x="0.0" y="114" width="600" height="240"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LdS-Jd-Ehc" id="MaI-2j-auu">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="239"/>
@@ -1046,7 +1046,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="tableCell1" rowHeight="100" id="01q-ST-gVb" customClass="Page1ProductDetailCell1TableViewCell" customModule="A2SLayoutsK3" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="290" width="600" height="100"/>
+                                        <rect key="frame" x="0.0" y="354" width="600" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="01q-ST-gVb" id="XEW-g5-qAB">
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="99"/>
@@ -1080,7 +1080,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="tableCell8" rowHeight="224" id="2ab-LL-zUv" customClass="Page1ProductDetailCell8TableViewCell" customModule="A2SLayoutsK3" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="390" width="600" height="224"/>
+                                        <rect key="frame" x="0.0" y="454" width="600" height="224"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2ab-LL-zUv" id="8uG-Sk-oY8">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="223"/>
@@ -1159,7 +1159,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="tableCell2" rowHeight="176" id="iBd-3N-6fK" customClass="Page1ProductDetailCell2TableViewCell" customModule="A2SLayoutsK3" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="614" width="600" height="176"/>
+                                        <rect key="frame" x="0.0" y="678" width="600" height="176"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iBd-3N-6fK" id="CRw-Eu-vwi">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="175"/>
@@ -1247,7 +1247,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="tableCell3" rowHeight="100" id="hoZ-gc-qGj" customClass="Page1ProductDetailCell3TableViewCell" customModule="A2SLayoutsK3" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="790" width="600" height="100"/>
+                                        <rect key="frame" x="0.0" y="854" width="600" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hoZ-gc-qGj" id="qFe-e4-WKS">
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="99"/>
@@ -1266,7 +1266,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="tableCell4" rowHeight="100" id="YFR-8h-aIx">
-                                        <rect key="frame" x="0.0" y="890" width="600" height="100"/>
+                                        <rect key="frame" x="0.0" y="954" width="600" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YFR-8h-aIx" id="3dt-qc-G3o">
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="99"/>
@@ -1282,7 +1282,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="tableCell5" rowHeight="100" id="rQc-C7-N7Y">
-                                        <rect key="frame" x="0.0" y="990" width="600" height="100"/>
+                                        <rect key="frame" x="0.0" y="1054" width="600" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rQc-C7-N7Y" id="cKu-bn-P9g">
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="99"/>
@@ -1298,7 +1298,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="tableCell7" rowHeight="100" id="MS8-nf-Ojs" customClass="Page1ProductDetailCell7TableViewCell" customModule="A2SLayoutsK3" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="1090" width="600" height="100"/>
+                                        <rect key="frame" x="0.0" y="1154" width="600" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MS8-nf-Ojs" id="wv7-kx-KAC">
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="99"/>
@@ -1320,7 +1320,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="tableCell6" rowHeight="224" id="o9X-Aa-OfD" customClass="Page1ProductDetailCell6TableViewCell" customModule="A2SLayoutsK3" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="1190" width="600" height="224"/>
+                                        <rect key="frame" x="0.0" y="1254" width="600" height="224"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="o9X-Aa-OfD" id="HiV-oQ-hxn">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="223"/>
@@ -1451,7 +1451,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="tableCell0" rowHeight="200" id="TcE-7u-cGn" customClass="Page1ShopDetailCell0TableViewCell" customModule="A2SLayoutsK3" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="600" height="200"/>
+                                        <rect key="frame" x="0.0" y="92" width="600" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TcE-7u-cGn" id="BXK-hG-z7l">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="199"/>
@@ -1491,7 +1491,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="tableCell1" rowHeight="100" id="Pjn-dr-aBb">
-                                        <rect key="frame" x="0.0" y="228" width="600" height="100"/>
+                                        <rect key="frame" x="0.0" y="292" width="600" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Pjn-dr-aBb" id="adQ-jU-qXQ">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="99"/>
@@ -1514,7 +1514,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="tableCell2" rowHeight="1000" id="z2w-Ic-bxN" customClass="Page1ShopDetailCell2TableViewCell" customModule="A2SLayoutsK3" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="328" width="600" height="1000"/>
+                                        <rect key="frame" x="0.0" y="392" width="600" height="1000"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="z2w-Ic-bxN" id="phu-Q2-Yd7">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="999"/>
@@ -1585,7 +1585,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="tableCell3" rowHeight="44" id="qto-3L-rZu">
-                                        <rect key="frame" x="0.0" y="1328" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="1392" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qto-3L-rZu" id="RP5-AX-5kB">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
@@ -1688,12 +1688,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="bP0-Gj-n06">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="bP0-Gj-n06">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="1000"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="tableCell0" rowHeight="220" id="bT6-8a-JQ4" customClass="Page1AddCartCell0TableViewCell" customModule="A2SLayoutsK3" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="600" height="220"/>
+                                        <rect key="frame" x="0.0" y="114" width="600" height="220"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bT6-8a-JQ4" id="x50-4X-SU8">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="219"/>
@@ -1741,7 +1741,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="tableCell1" rowHeight="220" id="qdy-B4-jFf" customClass="Page1AddCartCell1TableViewCell" customModule="A2SLayoutsK3" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="270" width="600" height="220"/>
+                                        <rect key="frame" x="0.0" y="334" width="600" height="220"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qdy-B4-jFf" id="3Ul-cx-efb">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="219"/>
@@ -1789,7 +1789,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="tableCell2" rowHeight="200" id="zdA-it-18w" customClass="Page1AddCartCell2TableViewCell" customModule="A2SLayoutsK3" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="490" width="600" height="200"/>
+                                        <rect key="frame" x="0.0" y="554" width="600" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zdA-it-18w" id="VkR-Gt-G9h">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="199"/>
@@ -1862,7 +1862,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="tableCell3" rowHeight="180" id="B90-JM-5Qx" customClass="Page1AddCartCell3TableViewCell" customModule="A2SLayoutsK3" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="690" width="600" height="180"/>
+                                        <rect key="frame" x="0.0" y="754" width="600" height="180"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="B90-JM-5Qx" id="W4o-jC-yHs">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="179"/>
@@ -1984,10 +1984,10 @@
                         <viewControllerLayoutGuide type="bottom" id="syb-kN-NXE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="hJ4-CS-mun">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="1600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TJE-zO-epB">
+                            <webView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TJE-zO-epB">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
                                 <connections>
@@ -2153,7 +2153,7 @@
         <image name="star0.png" width="119" height="26"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="eu7-Ir-JZh"/>
-        <segue reference="QT6-Lu-UPA"/>
+        <segue reference="JOK-jT-qbY"/>
+        <segue reference="cYJ-yg-3Mg"/>
     </inferredMetricsTieBreakers>
 </document>
