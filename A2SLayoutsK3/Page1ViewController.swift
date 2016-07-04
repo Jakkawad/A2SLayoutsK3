@@ -57,7 +57,7 @@ class Page1ViewController: UIViewController, UITableViewDataSource, UITableViewD
     func tableView(tableView: UITableView, shouldHighlightRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         return false
     }
-
+    /*
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "ProductDetailSegue1" {
             print("ProductDetailSegue1")
@@ -66,6 +66,7 @@ class Page1ViewController: UIViewController, UITableViewDataSource, UITableViewD
             "Error"
         }
     }
+    */
     override func viewDidLoad() {
         super.viewDidLoad()
         

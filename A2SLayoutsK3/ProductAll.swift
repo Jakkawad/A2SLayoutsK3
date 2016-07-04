@@ -80,10 +80,10 @@ extension Alamofire.Request {
                 wrapper.count = json["count"].intValue
                 
                 var allProducts = [ProductAlls]()
-                print(json)
+                //print(json)
                 let results = json["results"]
                 for jsonProductAlls in results {
-                    print("JSONProductRand = \(jsonProductAlls.1)")
+                    //print("JSONProductRand = \(jsonProductAlls.1)")
                     let productAll = ProductAlls(json: jsonProductAlls.1, id: Int(jsonProductAlls.0))
                     allProducts.append(productAll)
                 }

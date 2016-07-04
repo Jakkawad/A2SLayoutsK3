@@ -93,11 +93,11 @@ extension Alamofire.Request {
                 wrapper.count = json["count"].intValue
                 
                 var allProductTop = [ProductTop]()
-                print("JSON \(json)")
+                //print("JSON \(json)")
                 let results = json["results"]
-                print("Result \(results)")
+                //print("Result \(results)")
                 for jsonProductTop in results {
-                    print("JSONProductTop = \(jsonProductTop.1)")
+                    //print("JSONProductTop = \(jsonProductTop.1)")
                     let productTop = ProductTop(json: jsonProductTop.1, id: Int(jsonProductTop.0))
                     if productTop.productRating == "" {
                         productTop.productRating = "0"

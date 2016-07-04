@@ -135,9 +135,17 @@ class Page1Cell0TableViewCell: UITableViewCell, UICollectionViewDataSource, UICo
         */
         return col0!
     }
-    /*
+    
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         //print(dataArray[indexPath.row])
+        let product = self.product![indexPath.row]
+        //print(product.productName)
+        //let VC = Page1ProductDetailViewController()
+        //VC.productDetail = self.product![indexPath.row]
+        //let destinationVC = segue.destinationViewController as? Page1ProductDetailViewController
+        //destinationVC?.product = product
+        
+        /*
         var didSelectedProduct = dataArray[indexPath.row]
         //print(didSelectedProduct)
         ProductSelected.productArray = didSelectedProduct
@@ -151,14 +159,15 @@ class Page1Cell0TableViewCell: UITableViewCell, UICollectionViewDataSource, UICo
         var productRating = item.objectForKey("ProductRating") as? String
         //print(item.objectForKey("ProductName") as? String)
         
-        print(productId)
+        */
+        
         //print(aa)
         //ProductSelected.productArray = aa
         //print(ProductSelected.productArray)
         //print(aa)
         //ProductSelected.productArray = aa
     }
-    */
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         //loadJSON()

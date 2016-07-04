@@ -1009,38 +1009,74 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="239"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z8a-Cg-7yu">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Product Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z8a-Cg-7yu">
                                                     <rect key="frame" x="8" y="199" width="584" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7hC-LI-YCN">
-                                                    <rect key="frame" x="8" y="8" width="584" height="183"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" secondItem="7hC-LI-YCN" secondAttribute="height" multiplier="584:183" id="dJJ-uh-tTN"/>
-                                                        <constraint firstAttribute="height" constant="183" id="u6m-Ec-IJu"/>
-                                                    </constraints>
-                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Product Price" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WoS-Qi-HiR">
                                                     <rect key="frame" x="8" y="218" width="94" height="21"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="erI-fe-HvU">
+                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="191"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="bHo-NW-SaC">
+                                                        <size key="itemSize" width="560" height="190"/>
+                                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    </collectionViewFlowLayout>
+                                                    <cells>
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectCell0" id="qQu-AD-3CR" customClass="Page1ProductDetailCell0CollectionViewCell" customModule="A2SLayoutsK3" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="1" width="560" height="190"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                                <rect key="frame" x="0.0" y="0.0" width="560" height="190"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                                <subviews>
+                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EXE-OV-1Ck">
+                                                                        <rect key="frame" x="8" y="8" width="544" height="174"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="174" id="g9u-FM-lE7"/>
+                                                                            <constraint firstAttribute="width" secondItem="EXE-OV-1Ck" secondAttribute="height" multiplier="272:87" id="kYc-Ua-H8m"/>
+                                                                        </constraints>
+                                                                    </imageView>
+                                                                </subviews>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                            </view>
+                                                            <constraints>
+                                                                <constraint firstItem="EXE-OV-1Ck" firstAttribute="leading" secondItem="qQu-AD-3CR" secondAttribute="leadingMargin" id="FIB-vS-iz0"/>
+                                                                <constraint firstItem="EXE-OV-1Ck" firstAttribute="top" secondItem="qQu-AD-3CR" secondAttribute="topMargin" id="UQ0-Yj-Pjo"/>
+                                                                <constraint firstItem="EXE-OV-1Ck" firstAttribute="bottom" secondItem="qQu-AD-3CR" secondAttribute="bottomMargin" id="c4u-GD-r0L"/>
+                                                                <constraint firstItem="EXE-OV-1Ck" firstAttribute="trailing" secondItem="qQu-AD-3CR" secondAttribute="trailingMargin" id="jjd-bf-RVY"/>
+                                                            </constraints>
+                                                            <connections>
+                                                                <outlet property="imageViewProduct" destination="EXE-OV-1Ck" id="pIR-Qk-uhE"/>
+                                                            </connections>
+                                                        </collectionViewCell>
+                                                    </cells>
+                                                    <connections>
+                                                        <outlet property="dataSource" destination="LdS-Jd-Ehc" id="ITj-4L-3gN"/>
+                                                        <outlet property="delegate" destination="LdS-Jd-Ehc" id="jxI-4S-q3u"/>
+                                                    </connections>
+                                                </collectionView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="7hC-LI-YCN" firstAttribute="top" secondItem="MaI-2j-auu" secondAttribute="topMargin" id="I7n-lr-BmU"/>
-                                                <constraint firstItem="z8a-Cg-7yu" firstAttribute="top" secondItem="7hC-LI-YCN" secondAttribute="bottom" constant="8" id="Iw4-TK-w9W"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="z8a-Cg-7yu" secondAttribute="bottom" constant="11" id="UhL-Xb-qgb"/>
                                                 <constraint firstItem="z8a-Cg-7yu" firstAttribute="leading" secondItem="MaI-2j-auu" secondAttribute="leadingMargin" id="Usg-NH-LIt"/>
                                                 <constraint firstItem="z8a-Cg-7yu" firstAttribute="trailing" secondItem="MaI-2j-auu" secondAttribute="trailingMargin" id="bme-a6-Cr2"/>
-                                                <constraint firstItem="7hC-LI-YCN" firstAttribute="trailing" secondItem="MaI-2j-auu" secondAttribute="trailingMargin" id="igN-c3-MV9"/>
-                                                <constraint firstItem="7hC-LI-YCN" firstAttribute="leading" secondItem="MaI-2j-auu" secondAttribute="leadingMargin" id="us4-Va-pdB"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="erI-fe-HvU" secondAttribute="trailing" constant="-8" id="diW-UL-qpl"/>
+                                                <constraint firstItem="erI-fe-HvU" firstAttribute="leading" secondItem="MaI-2j-auu" secondAttribute="leadingMargin" constant="-8" id="eOK-yZ-zEb"/>
+                                                <constraint firstItem="erI-fe-HvU" firstAttribute="top" secondItem="MaI-2j-auu" secondAttribute="topMargin" constant="-8" id="m63-3J-C5N"/>
+                                                <constraint firstItem="z8a-Cg-7yu" firstAttribute="top" secondItem="erI-fe-HvU" secondAttribute="bottom" constant="8" id="oGg-XR-E3Z"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="imageViewProduct" destination="7hC-LI-YCN" id="zkq-vd-1ch"/>
+                                            <outlet property="collectionView" destination="erI-fe-HvU" id="ZWB-Rx-IwR"/>
                                             <outlet property="lblProductName" destination="z8a-Cg-7yu" id="aK5-Fl-K7S"/>
                                             <outlet property="lblProductPrice" destination="WoS-Qi-HiR" id="f7R-vN-ymH"/>
                                         </connections>
@@ -1088,7 +1124,7 @@
                                             <subviews>
                                                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="RdA-dB-bqg">
                                                     <rect key="frame" x="8" y="8" width="584" height="207"/>
-                                                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                    <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <prototypes>
                                                         <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="tableCell0" rowHeight="44" id="e2P-AO-HFh" customClass="Page1ProductDetailOptionCell0TableViewCell" customModule="A2SLayoutsK3" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="50" width="584" height="44"/>
@@ -1690,7 +1726,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="bP0-Gj-n06">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="1000"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="tableCell0" rowHeight="220" id="bT6-8a-JQ4" customClass="Page1AddCartCell0TableViewCell" customModule="A2SLayoutsK3" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="114" width="600" height="220"/>
@@ -1713,7 +1749,7 @@
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8nc-B0-KG3">
                                                                         <rect key="frame" x="13" y="8" width="42" height="21"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                 </subviews>
@@ -1761,7 +1797,7 @@
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P2E-D1-QNv">
                                                                         <rect key="frame" x="13" y="8" width="42" height="21"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                 </subviews>
@@ -1805,7 +1841,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Qty" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4MH-FE-nDo">
                                                     <rect key="frame" x="459" y="54" width="28" height="20"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c3b-nt-zi0">
@@ -1820,7 +1856,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eGq-Tr-Gmt">
                                                     <rect key="frame" x="399" y="170" width="38" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="itx-x5-kWF">
@@ -1830,7 +1866,7 @@
                                                         <constraint firstAttribute="width" constant="305" id="OpR-Rp-y58"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99,999,999.99" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Adr-U4-8kj">
@@ -1840,7 +1876,7 @@
                                                         <constraint firstAttribute="height" constant="21" id="n5r-KN-bZd"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -2154,6 +2190,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="JOK-jT-qbY"/>
-        <segue reference="cYJ-yg-3Mg"/>
+        <segue reference="QT6-Lu-UPA"/>
     </inferredMetricsTieBreakers>
 </document>

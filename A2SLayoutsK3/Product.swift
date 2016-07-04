@@ -8,6 +8,7 @@
 
 import Foundation
 
+/*
 struct Product {
     var productId:String
     var productName:String
@@ -23,7 +24,16 @@ struct Product {
         productRating = _rating
     }
 }
+*/
 
+struct Product {
+    var productId:Int?
+    var productName:String?
+    var productPrice:String?
+    var productShowImage:String?
+    var productRating:String?
+
+}
 struct ProductSelected {
     static var productId:String = ""
     static var productArray:AnyObject!

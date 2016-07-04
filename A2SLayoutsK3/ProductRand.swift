@@ -102,7 +102,7 @@ extension Alamofire.Request {
                 let results = json["results"]
                 //print("Result = \(results)")
                 for jsonProductRands in results {
-                    print("JSONProductRand = \(jsonProductRands.1)")
+                    //print("JSONProductRand = \(jsonProductRands.1)")
                     let productRand = ProductRands(json: jsonProductRands.1, id: Int(jsonProductRands.0))
                     if productRand.productRating == "" {
                         productRand.productRating = "0"
