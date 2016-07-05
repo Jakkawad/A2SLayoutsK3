@@ -11,7 +11,7 @@ import Alamofire
 import SwiftyJSON
 import MapleBacon
 
-class Page1ProductAllViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class Page1ProductAllViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UISearchBarDelegate {
 
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -162,6 +162,7 @@ class Page1ProductAllViewController: UIViewController, UICollectionViewDataSourc
         super.viewDidLoad()
         
         loadFirstProducts()
+        
         
         // Do any additional setup after loading the view.
     }

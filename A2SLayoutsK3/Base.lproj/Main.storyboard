@@ -901,6 +901,29 @@
             </objects>
             <point key="canvasLocation" x="204" y="-1151"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="g0b-MA-H0P">
+            <objects>
+                <viewController id="YPp-kt-1Q2" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Tgp-EJ-6JJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="FdV-DG-KpV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tF0-Qa-PEx">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="n8F-AK-BfO">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="oel-f1-CZq"/>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lSW-mc-NZD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1038" y="-2736"/>
+        </scene>
         <!--Page1 Product All View Controller-->
         <scene sceneID="hEs-CU-s2m">
             <objects>
@@ -975,7 +998,13 @@
                             <constraint firstItem="Uxi-9f-Arz" firstAttribute="bottom" secondItem="PM8-k1-JGU" secondAttribute="bottomMargin" id="qXp-96-0o1"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="olt-4C-Tfp"/>
+                    <navigationItem key="navigationItem" id="olt-4C-Tfp">
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="thT-lL-gdn">
+                            <connections>
+                                <segue destination="YPp-kt-1Q2" kind="push" id="L1b-tT-bdD"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="600" height="600"/>
                     <connections>
@@ -2189,7 +2218,7 @@
         <image name="star0.png" width="119" height="26"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="JOK-jT-qbY"/>
+        <segue reference="zmU-73-KI5"/>
         <segue reference="QT6-Lu-UPA"/>
     </inferredMetricsTieBreakers>
 </document>
