@@ -7,5 +7,6 @@ pod 'Alamofire'
 pod 'SwiftyJSON'
 pod 'PageMenu'
 pod 'IQKeyboardManager'
+pod 'SideMenu'
 end
 

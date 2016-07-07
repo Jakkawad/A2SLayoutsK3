@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '4B8EB97D025874774733C504'
+               BlueprintIdentifier = 'C45FE3E7B34B151E7127EC91'
                BlueprintName = 'MapleBacon'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'MapleBacon.framework'>

@@ -88,6 +88,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-A2SLayoutsK3/IQKeyboardManager.framework"
   install_framework "Pods-A2SLayoutsK3/MapleBacon.framework"
   install_framework "Pods-A2SLayoutsK3/PageMenu.framework"
+  install_framework "Pods-A2SLayoutsK3/SideMenu.framework"
   install_framework "Pods-A2SLayoutsK3/SwiftyJSON.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
@@ -95,5 +96,6 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-A2SLayoutsK3/IQKeyboardManager.framework"
   install_framework "Pods-A2SLayoutsK3/MapleBacon.framework"
   install_framework "Pods-A2SLayoutsK3/PageMenu.framework"
+  install_framework "Pods-A2SLayoutsK3/SideMenu.framework"
   install_framework "Pods-A2SLayoutsK3/SwiftyJSON.framework"
 fi

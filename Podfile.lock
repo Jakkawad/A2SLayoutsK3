@@ -3,6 +3,7 @@ PODS:
   - IQKeyboardManager (4.0.3)
   - MapleBacon (2.0.8)
   - PageMenu (1.2.9)
+  - SideMenu (1.1.7)
   - SwiftyJSON (2.3.2)
 
 DEPENDENCIES:
@@ -10,6 +11,7 @@ DEPENDENCIES:
   - IQKeyboardManager
   - MapleBacon
   - PageMenu
+  - SideMenu
   - SwiftyJSON
 
 SPEC CHECKSUMS:
@@ -17,6 +19,7 @@ SPEC CHECKSUMS:
   IQKeyboardManager: be9695ffc5a52077deb4847608f338771022d6d1
   MapleBacon: 32e3590e1730485b93f450283ff242f9444efc12
   PageMenu: ba19ff267f7a19e444e93c20a7847b78954a7011
+  SideMenu: 7b420772e1aa7a2b3a0b0e191566e7e8e0868f53
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
 COCOAPODS: 0.39.0
