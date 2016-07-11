@@ -24,6 +24,7 @@ enum ProductRandFields:String {
     case productShowImage = "ProductShowImage"
     case productRating = "ProductRating"
     case storeId = "StoreSid"
+    
 }
 
 class ProductRands {

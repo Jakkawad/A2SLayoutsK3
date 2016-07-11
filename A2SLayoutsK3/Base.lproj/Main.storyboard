@@ -1467,6 +1467,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="Oob-et-MQO" kind="push" identifier="ShippingDetailSegue" id="liV-w7-KrE"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="tableCell5" rowHeight="100" id="rQc-C7-N7Y">
                                         <rect key="frame" x="0.0" y="1054" width="600" height="100"/>
@@ -2165,6 +2168,43 @@
             </objects>
             <point key="canvasLocation" x="1788" y="-2108"/>
         </scene>
+        <!--Page1 Product Detail Shipping View Controller-->
+        <scene sceneID="G1u-Ab-i92">
+            <objects>
+                <viewController id="Oob-et-MQO" customClass="Page1ProductDetailShippingViewController" customModule="A2SLayoutsK3" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pka-p7-h8d"/>
+                        <viewControllerLayoutGuide type="bottom" id="1KT-pe-oYO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QHd-1s-Ec0">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cLp-YB-V8C">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Oob-et-MQO" id="xKt-wt-vZa"/>
+                                </connections>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cLp-YB-V8C" firstAttribute="leading" secondItem="QHd-1s-Ec0" secondAttribute="leadingMargin" constant="-20" id="0Nj-u1-vnj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cLp-YB-V8C" secondAttribute="trailing" constant="-20" id="IPb-Q8-gGH"/>
+                            <constraint firstItem="cLp-YB-V8C" firstAttribute="top" secondItem="QHd-1s-Ec0" secondAttribute="topMargin" id="psC-XZ-vql"/>
+                            <constraint firstItem="1KT-pe-oYO" firstAttribute="top" secondItem="cLp-YB-V8C" secondAttribute="bottom" id="r4e-7F-eLl"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="TiM-cU-htN"/>
+                    <connections>
+                        <outlet property="webView" destination="cLp-YB-V8C" id="Tlh-C2-5FX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3CW-JG-Ltc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1789" y="-4039"/>
+        </scene>
         <!--Page1 Product Detail Warranty View Controller-->
         <scene sceneID="wwC-fS-flU">
             <objects>
@@ -2200,7 +2240,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2vD-V4-YZm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1728" y="-3388"/>
+            <point key="canvasLocation" x="1788" y="-3393"/>
         </scene>
         <!--Page1 Product Detail Payment View Controller-->
         <scene sceneID="ct3-HB-913">
@@ -2239,7 +2279,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wOq-xZ-LZv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1728" y="-2739"/>
+            <point key="canvasLocation" x="1788" y="-2747"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="CMv-h9-jwj">

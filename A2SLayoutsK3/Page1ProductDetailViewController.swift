@@ -149,8 +149,8 @@ class Page1ProductDetailViewController: UIViewController, UITableViewDataSource,
             return 130
             //return 224
         } else if indexPath.section == 3 {
-            return 224
-            //return 100
+            //return 224
+            return 104
         } else if indexPath.section == 4 {
             return 100
         } else if indexPath.section == 5 {
@@ -212,7 +212,6 @@ class Page1ProductDetailViewController: UIViewController, UITableViewDataSource,
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "ProductDetailSegue" {
-            //print("Option")
             let destinationVC = segue.destinationViewController as? Page1ProductDetailProductDetailViewController
             destinationVC!.productDetail = productRand
         } else if segue.identifier == "PaymentDetailSegue" {
@@ -221,8 +220,11 @@ class Page1ProductDetailViewController: UIViewController, UITableViewDataSource,
         } else if segue.identifier == "WarrantyDetailSegue" {
             let destinationVC = segue.destinationViewController as? Page1ProductDetailWarrantyViewController
             destinationVC!.productDetail = productRand
+        } else if segue.identifier == "ShippingDetailSegue" {
+            let destinationVC = segue.destinationViewController as? Page1ProductDetailShippingViewController
+            destinationVC!.productDetail = productRand
         } else {
-            print("Error")
+            print("ERRROR")
         }
     }
     
