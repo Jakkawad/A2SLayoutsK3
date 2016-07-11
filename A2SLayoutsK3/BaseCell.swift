@@ -23,6 +23,8 @@ struct BaseCell {
     
     
     static var collectCell0 = "collectCell0"
+    static var collectCell1 = "collectCell1"
+    static var collectCell2 = "collectCell2"
     
     static var menuCell0 = "menuCell0"
 }

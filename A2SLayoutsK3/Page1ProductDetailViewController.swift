@@ -28,26 +28,12 @@ class Page1ProductDetailViewController: UIViewController, UITableViewDataSource,
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         //return 8
         //return 9
-        return 9
+        return 7
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //return 2
         if section == 0 {
-            return 1
-        } else if section == 1 {
-            return 1
-        } else if section == 2 {
-            return 1
-        } else if section == 3 {
-            return 1
-        } else if section == 4 {
-            return 1
-        } else if section == 5 {
-            return 1
-        } else if section == 6 {
-            return 1
-        } else if section == 7 {
             return 1
         } else {
             return 1
@@ -61,21 +47,16 @@ class Page1ProductDetailViewController: UIViewController, UITableViewDataSource,
          section 1
         Description
          section 2
-        Option
-         section 3
         Button
-         section 4
+         section 3
         Review
+         section 4
+        Option
          section 5
-        Shipping
-         section 6
-        Warranty
-         section 7
         Shop
-         section 8
+         section 6
         Other
         */
-        
         
         if indexPath.section == 0 {
             //Image
@@ -96,17 +77,14 @@ class Page1ProductDetailViewController: UIViewController, UITableViewDataSource,
             } else {
                 print("Error")
             }
-                //cell0?.lblProductPrice.text = productDetail?.productPrice
-            //print(productDetail!.productId!)
             return cell0!
         } else if indexPath.section == 1 {
             //Description
             let cell1 = tableView.dequeueReusableCellWithIdentifier(BaseCell.tableCell1) as? Page1ProductDetailCell1TableViewCell
             
             cell1?.lblProductDescription.text = dummyDescription()
-            
+
             return cell1!
-        
         } else if indexPath.section == 2 {
             //Option
             let cell8 = tableView.dequeueReusableCellWithIdentifier(BaseCell.tableCell8) as? Page1ProductDetailCell8TableViewCell
@@ -115,19 +93,12 @@ class Page1ProductDetailViewController: UIViewController, UITableViewDataSource,
             //Button
             let cell2 = tableView.dequeueReusableCellWithIdentifier(BaseCell.tableCell2)
             return cell2!
+            
         } else if indexPath.section == 4 {
-            //Payment
-            let cell3 = tableView.dequeueReusableCellWithIdentifier(BaseCell.tableCell3)
-            return  cell3!
-        } else if indexPath.section == 5 {
-            //Shipping
-            let cell4 = tableView.dequeueReusableCellWithIdentifier(BaseCell.tableCell4)
-            return cell4!
-        } else if indexPath.section == 6 {
             //Warranty
-            let cell5 = tableView.dequeueReusableCellWithIdentifier(BaseCell.tableCell5)
+            let cell5 = tableView.dequeueReusableCellWithIdentifier(BaseCell.tableCell3) as? Page1ProductDetailCell3TableViewCell
             return cell5!
-        } else if indexPath.section == 7 {
+        } else if indexPath.section == 5 {
             //Shop
             let cell7 = tableView.dequeueReusableCellWithIdentifier(BaseCell.tableCell7) as? Page1ProductDetailCell7TableViewCell
             let dummyImageURL = NSURL(string: dummyImage("80x80"))
@@ -138,6 +109,8 @@ class Page1ProductDetailViewController: UIViewController, UITableViewDataSource,
             let cell6 = tableView.dequeueReusableCellWithIdentifier(BaseCell.tableCell6) as? Page1ProductDetailCell6TableViewCell
             return cell6!
         }
+        
+        
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
@@ -152,12 +125,8 @@ class Page1ProductDetailViewController: UIViewController, UITableViewDataSource,
             //return 224
             return 104
         } else if indexPath.section == 4 {
-            return 100
+            return 130
         } else if indexPath.section == 5 {
-            return 100
-        } else if indexPath.section == 6 {
-            return 100
-        } else if indexPath.section == 7 {
             return 100
         } else {
             //return 145
@@ -178,15 +147,9 @@ class Page1ProductDetailViewController: UIViewController, UITableViewDataSource,
             return "Review"
             //return "Payment"
         } else if section == 4 {
-            return "Payment"
-            //return "Shipping"
-        } else if section == 5 {
-            return "Shipping"
-            //return "Warranty"
-        } else if section == 6 {
-            return "Warranty"
+            return "Option"
             //return "Shop"
-        } else if section == 7{
+        } else if section == 5{
             return "Shop"
             //return ""
         } else {
