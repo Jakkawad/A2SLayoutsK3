@@ -57,16 +57,26 @@ class Page1ViewController: UIViewController, UITableViewDataSource, UITableViewD
     func tableView(tableView: UITableView, shouldHighlightRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         return false
     }
-    /*
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "ProductDetailSegue1" {
-            print("ProductDetailSegue1")
+        if segue.identifier == "ProductDetailSegue3" {
+            print("ProductDetailSegue3")
+            let detailVC = segue.destinationViewController as! Page1ProductDetailViewController
+            detailVC.fromWhere = "ProductTops"
+            //let detailVC = segue.destinationViewController as! Page1ProductDetailViewController
+            //var dVC = Page1Cell0TableViewCell.collectionView()
+            //let d = segue.destinationViewController as! Page1Cell0TableViewCell
+            //detailVC.productTop = d.product
+            //let d = segue.sourceViewController as! Page1Cell0TableViewCell
+            //print(d.ASD)
+            //let indexPath = detailVC.
+            
             
         } else {
             "Error"
         }
     }
-    */
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

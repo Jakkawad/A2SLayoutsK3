@@ -83,7 +83,9 @@ class Page1ProductAllViewController: UIViewController, UICollectionViewDataSourc
             let product = self.product![indexPath!.row]
             
             let destinationVC = segue.destinationViewController as? Page1ProductDetailViewController
-            destinationVC?.productDetail = product
+            //destinationVC?.productDetail = product
+            destinationVC?.productRand = product
+            destinationVC?.fromWhere = "ProductRands"
             //print(product)
             //destinationVC?.productDetail = AA
             //destinationVC?.title = "AAA"
@@ -157,6 +159,11 @@ class Page1ProductAllViewController: UIViewController, UICollectionViewDataSourc
         return col0!
     }
     
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        
+    }
+    
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()

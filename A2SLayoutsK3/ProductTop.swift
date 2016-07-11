@@ -11,7 +11,7 @@ import Alamofire
 import SwiftyJSON
 
 class ProductTopWrapper {
-    var product:Array<ProductTop>?
+    var product:Array<ProductTops>?
     var count:Int?
     var next:String?
     var previous:String?
@@ -23,21 +23,26 @@ enum ProductTopFields:String {
     case productPrice = "ProductPrice"
     case productShowImage = "ProductShowImage"
     case productRating = "ProductRating"
+    case productSubcat = "ProductSubcat"
 }
 
-class ProductTop {
-    var productId:Int?
+class ProductTops {
+    var idNumber:Int?
+    var productId:String?
     var productName:String?
     var productPrice:String?
     var productShowImage:String?
     var productRating:String?
+    var productSubcat:String?
     
     required init(json:JSON, id:Int?) {
-        self.productId = json[ProductTopFields.productId.rawValue].int
+        self.idNumber = id
+        self.productId = json[ProductTopFields.productId.rawValue].stringValue
         self.productName = json[ProductTopFields.productName.rawValue].stringValue
         self.productPrice = json[ProductTopFields.productPrice.rawValue].stringValue
         self.productShowImage = json[ProductTopFields.productShowImage.rawValue].stringValue
         self.productRating = json[ProductTopFields.productRating.rawValue].stringValue
+        self.productSubcat = json[ProductTopFields.productSubcat.rawValue].stringValue
         
         // TODO: all field
     }
@@ -58,7 +63,7 @@ class ProductTop {
     }
     
     class func getProductTop(completionHandler: (ProductTopWrapper?, NSError?) -> Void) {
-        getProductTopAtPath(ProductTop.endpointForProductTop(), completionHandler: completionHandler)
+        getProductTopAtPath(ProductTops.endpointForProductTop(), completionHandler: completionHandler)
     }
     
     class func getMoreProductTop(wrapper: ProductTopWrapper?, completionHandler: (ProductTopWrapper?, NSError?) -> Void) {
@@ -92,13 +97,13 @@ extension Alamofire.Request {
                 wrapper.previous = json["previous"].stringValue
                 wrapper.count = json["count"].intValue
                 
-                var allProductTop = [ProductTop]()
+                var allProductTop = [ProductTops]()
                 //print("JSON \(json)")
                 let results = json["results"]
                 //print("Result \(results)")
                 for jsonProductTop in results {
                     //print("JSONProductTop = \(jsonProductTop.1)")
-                    let productTop = ProductTop(json: jsonProductTop.1, id: Int(jsonProductTop.0))
+                    let productTop = ProductTops(json: jsonProductTop.1, id: Int(jsonProductTop.0))
                     if productTop.productRating == "" {
                         productTop.productRating = "0"
                     }

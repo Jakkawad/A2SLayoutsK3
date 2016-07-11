@@ -686,7 +686,7 @@
                                                                 <outlet property="imageViewProduct" destination="pLJ-UQ-7Fk" id="Ilj-Nx-bZp"/>
                                                                 <outlet property="lblProductName" destination="Y6P-6b-YC6" id="CBe-qm-9jj"/>
                                                                 <outlet property="lblProductPrice" destination="JqU-Xj-gWf" id="qn8-10-TAh"/>
-                                                                <segue destination="c4d-0T-lnd" kind="push" identifier="" id="4YB-Yb-boa"/>
+                                                                <segue destination="c4d-0T-lnd" kind="push" identifier="ProductDetailSegue3" id="4YB-Yb-boa"/>
                                                             </connections>
                                                         </collectionViewCell>
                                                     </cells>
@@ -771,7 +771,7 @@
                                                                 <outlet property="imageViewProduct" destination="vw9-vk-yn7" id="MEt-qP-Ns0"/>
                                                                 <outlet property="lblProductName" destination="YtX-Gb-uq2" id="6n5-fC-i4I"/>
                                                                 <outlet property="lblProductPrice" destination="ptg-A0-hHM" id="ogo-sn-Bpc"/>
-                                                                <segue destination="c4d-0T-lnd" kind="push" identifier="" id="wmM-dT-HsE"/>
+                                                                <segue destination="c4d-0T-lnd" kind="push" identifier="ProductDetailSegue4" id="wmM-dT-HsE"/>
                                                             </connections>
                                                         </collectionViewCell>
                                                     </cells>
@@ -854,7 +854,7 @@
                                                                 <outlet property="imageViewRating" destination="YAi-f5-P2X" id="Kls-Uh-dv2"/>
                                                                 <outlet property="lblProductName" destination="fwV-NO-4BT" id="24X-5A-iIR"/>
                                                                 <outlet property="lblProductPrice" destination="Ips-fx-y3X" id="YWe-hD-Mfu"/>
-                                                                <segue destination="c4d-0T-lnd" kind="push" identifier="ProductDetailSegue3" id="JOK-jT-qbY"/>
+                                                                <segue destination="c4d-0T-lnd" kind="push" identifier="ProductDetailSegue5" id="JOK-jT-qbY"/>
                                                             </connections>
                                                         </collectionViewCell>
                                                     </cells>
@@ -1006,7 +1006,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="tableCell0" textLabel="Eeb-Mk-ipY" style="IBUITableViewCellStyleDefault" id="cDy-x8-aVs">
-                                        <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cDy-x8-aVs" id="Qe7-7s-M66">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
@@ -1449,7 +1449,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="JFf-SW-ZAu" kind="push" id="ytc-Tb-9xr"/>
+                                            <segue destination="JFf-SW-ZAu" kind="push" identifier="PaymentDetailSegue" id="ytc-Tb-9xr"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="tableCell4" rowHeight="100" id="YFR-8h-aIx">
@@ -1483,6 +1483,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="cPL-ji-tML" kind="push" identifier="WarrantyDetailSegue" id="9sn-d2-VDR"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="tableCell7" rowHeight="100" id="MS8-nf-Ojs" customClass="Page1ProductDetailCell7TableViewCell" customModule="A2SLayoutsK3" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="1154" width="600" height="100"/>
@@ -2162,6 +2165,43 @@
             </objects>
             <point key="canvasLocation" x="1788" y="-2108"/>
         </scene>
+        <!--Page1 Product Detail Warranty View Controller-->
+        <scene sceneID="wwC-fS-flU">
+            <objects>
+                <viewController id="cPL-ji-tML" customClass="Page1ProductDetailWarrantyViewController" customModule="A2SLayoutsK3" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iIv-Tc-PIe"/>
+                        <viewControllerLayoutGuide type="bottom" id="ur4-Z1-kO1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aQo-GP-9s5">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ape-Su-FkB">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="cPL-ji-tML" id="YpH-hL-a4c"/>
+                                </connections>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ape-Su-FkB" firstAttribute="leading" secondItem="aQo-GP-9s5" secondAttribute="leadingMargin" constant="-20" id="1Hg-fD-kV0"/>
+                            <constraint firstItem="ur4-Z1-kO1" firstAttribute="top" secondItem="ape-Su-FkB" secondAttribute="bottom" id="8OX-qJ-S3O"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ape-Su-FkB" secondAttribute="trailing" constant="-20" id="iZD-NQ-UPb"/>
+                            <constraint firstItem="ape-Su-FkB" firstAttribute="top" secondItem="aQo-GP-9s5" secondAttribute="topMargin" id="vsp-lW-8o0"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ahw-V1-5zO"/>
+                    <connections>
+                        <outlet property="webView" destination="ape-Su-FkB" id="cWw-oi-8C9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2vD-V4-YZm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1728" y="-3388"/>
+        </scene>
         <!--Page1 Product Detail Payment View Controller-->
         <scene sceneID="ct3-HB-913">
             <objects>
@@ -2171,7 +2211,7 @@
                         <viewControllerLayoutGuide type="bottom" id="syb-kN-NXE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="hJ4-CS-mun">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="1600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TJE-zO-epB">
@@ -2191,13 +2231,15 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="l3q-eE-68T"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="600"/>
                     <connections>
                         <outlet property="webView" destination="TJE-zO-epB" id="ht3-eX-mME"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wOq-xZ-LZv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2431" y="-2108"/>
+            <point key="canvasLocation" x="1728" y="-2739"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="CMv-h9-jwj">
@@ -2358,7 +2400,7 @@
         <image name="star0.png" width="119" height="26"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="cYJ-yg-3Mg"/>
+        <segue reference="QT6-Lu-UPA"/>
         <segue reference="zmU-73-KI5"/>
     </inferredMetricsTieBreakers>
 </document>

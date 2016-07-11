@@ -12,8 +12,15 @@ class Page1ProductDetailPaymentViewController: UIViewController, UIWebViewDelega
 
     @IBOutlet weak var webView: UIWebView!
     
+    var productDetail:ProductRands?
+    
     func loadWeb() {
-        let url = NSURL(string: "http://rest.all2sale.com/api_mobile_get.php?api=storepayment&storepayment=store14362424731909054759")
+        //let a12 = productDetail!.productId!
+        let storeId = productDetail!.storeId!
+        print(storeId)
+        let url = NSURL(string: "http://rest.all2sale.com/api_mobile_get.php?api=storepayment&storepayment="+storeId)
+        print(url)
+        //let url = NSURL(string: "http://rest.all2sale.com/api_mobile_get.php?api=storepayment&storepayment=store14362424731909054759")
         let request = NSURLRequest(URL: url!)
         self.webView.loadRequest(request)
     }

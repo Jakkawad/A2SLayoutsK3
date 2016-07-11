@@ -19,18 +19,21 @@ class Page1Cell0TableViewCell: UITableViewCell, UICollectionViewDataSource, UICo
 
     var dataArray = NSArray()
     
+    var ASD = "DDD"
     
     // Alamofire
-    var product:Array<ProductTop>?
+    var product:Array<ProductTops>?
     var productTopWrapper:ProductTopWrapper?
     var isLoadingProducts = false
     
     //
     
+    //var productTop = Product()
+    
     
     func loadFirstProducts() {
         isLoadingProducts = true
-        ProductTop.getProductTop({ (productTopWrapper, error) in
+        ProductTops.getProductTop({ (productTopWrapper, error) in
             
             self.addProductsFromWrapper(productTopWrapper)
             self.isLoadingProducts = false
@@ -41,7 +44,7 @@ class Page1Cell0TableViewCell: UITableViewCell, UICollectionViewDataSource, UICo
     func loadMoreProducts() {
         self.isLoadingProducts = true
         if self.product != nil && self.productTopWrapper != nil && self.product!.count < self.productTopWrapper!.count {
-            ProductTop.getMoreProductTop(self.productTopWrapper, completionHandler: { (moreWrapper, error) in
+            ProductTops.getMoreProductTop(self.productTopWrapper, completionHandler: { (moreWrapper, error) in
                 if error != nil {
                     // TODO: improved error handling
                     self.isLoadingProducts = false
@@ -138,7 +141,23 @@ class Page1Cell0TableViewCell: UITableViewCell, UICollectionViewDataSource, UICo
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         //print(dataArray[indexPath.row])
+        //let product = self.product![indexPath.row]
+        //var test = Product(_id: product.productId!, _name: product.productName!, _image: product.productShowImage!, _price: product.productPrice! , _rating: product.productRating!)
+        //print(test)
+        //print(product![indexPath.row])
+        var productTop = Product()
         let product = self.product![indexPath.row]
+        //print(product.productId)
+        var productIdString = String(product.productId!)
+        productTop.productId = product.productId
+        productTop.description()
+        //var test = Product(_id: productIdString, _name: product.productName!, _image: product.productShowImage!, _price: product.productPrice! , _rating: product.productRating!)
+        //print(FromWhere)
+        //self.performSegueWithIdentifire
+        //Product.init(_id: product.productId!, _name: product.productName!, _image: product.productShowImage!
+        //    , _price: product.productPrice!, _rating: product.productRating!)
+        //print(Product)
+        //print(product)
         //print(product.productName)
         //let VC = Page1ProductDetailViewController()
         //VC.productDetail = self.product![indexPath.row]

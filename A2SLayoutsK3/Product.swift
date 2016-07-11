@@ -8,24 +8,29 @@
 
 import Foundation
 
-/*
+
 struct Product {
-    var productId:String
-    var productName:String
-    var productImage:NSURL
-    var productPrice:String
-    var productRating:NSURL
-    
-    init(_id:String, _name:String, _image:NSURL, _price:String, _rating:NSURL) {
+    var productId:String?
+    var productName:String?
+    var productPrice:String?
+    var productShowImage:String?
+    var productRating:String?
+    /*
+    init(_id:String, _name:String, _image:String, _price:String, _rating:String) {
         productId = _id
         productName = _name
-        productImage = _image
+        productShowImage = _image
         productPrice = _price
         productRating = _rating
     }
+    */
+    
+    func description() {
+        print("ProductId = \(productId)")
+    }
 }
-*/
 
+/*
 struct Product {
     var productId:Int?
     var productName:String?
@@ -34,10 +39,19 @@ struct Product {
     var productRating:String?
 
 }
+*/
 struct ProductSelected {
     static var productId:String = ""
     static var productArray:AnyObject!
     //static var productArray:NSArray = []
+}
+
+struct FromWhere {
+    var fromWhere:String?
+    
+    init(_fromWhere:String) {
+        fromWhere = _fromWhere
+    }
 }
 /*
 struct ProductDetail {

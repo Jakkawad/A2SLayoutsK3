@@ -19,7 +19,7 @@ class Page1Cell1TableViewCell: UITableViewCell, UICollectionViewDataSource, UICo
     var dataArray = NSArray()
     
     // Alamofire
-    var product:Array<ProductTop>?
+    var product:Array<ProductTops>?
     var productTopWrapper:ProductTopWrapper?
     var isLoadingProducts = false
     
@@ -28,7 +28,7 @@ class Page1Cell1TableViewCell: UITableViewCell, UICollectionViewDataSource, UICo
     
     func loadFirstProducts() {
         isLoadingProducts = true
-        ProductTop.getProductTop({ (productTopWrapper, error) in
+        ProductTops.getProductTop({ (productTopWrapper, error) in
             
             self.addProductsFromWrapper(productTopWrapper)
             self.isLoadingProducts = false
@@ -39,7 +39,7 @@ class Page1Cell1TableViewCell: UITableViewCell, UICollectionViewDataSource, UICo
     func loadMoreProducts() {
         self.isLoadingProducts = true
         if self.product != nil && self.productTopWrapper != nil && self.product!.count < self.productTopWrapper!.count {
-            ProductTop.getMoreProductTop(self.productTopWrapper, completionHandler: { (moreWrapper, error) in
+            ProductTops.getMoreProductTop(self.productTopWrapper, completionHandler: { (moreWrapper, error) in
                 if error != nil {
                     // TODO: improved error handling
                     self.isLoadingProducts = false

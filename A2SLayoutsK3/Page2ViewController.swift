@@ -86,7 +86,7 @@ class Page2ViewController: UIViewController, UITableViewDataSource, UITableViewD
         self.title = "Cart"
         
         
-        ProductTop.getProductTop({ (productTopWrapper, error) in
+        ProductTops.getProductTop({ (productTopWrapper, error) in
             
             
         })

@@ -23,24 +23,26 @@ enum ProductRandFields:String {
     case productPrice = "ProductPrice"
     case productShowImage = "ProductShowImage"
     case productRating = "ProductRating"
-    
+    case storeId = "StoreSid"
 }
 
 class ProductRands {
-    var productId:Int?
+    var idNumber:Int?
+    var productId:String?
     var productName:String?
     var productPrice:String?
     var productShowImage:String?
     var productRating:String?
-    
+    var storeId:String?
     
     required init(json:JSON, id:Int?) {
-        self.productId = json[ProductRandFields.productId.rawValue].int
+        self.idNumber = id
+        self.productId = json[ProductTopFields.productId.rawValue].stringValue
         self.productName = json[ProductRandFields.productName.rawValue].stringValue
         self.productPrice = json[ProductRandFields.productPrice.rawValue].stringValue
         self.productShowImage = json[ProductRandFields.productShowImage.rawValue].stringValue
         self.productRating = json[ProductRandFields.productRating.rawValue].stringValue
-        
+        self.storeId = json[ProductRandFields.storeId.rawValue].stringValue
         // TODO: all field
     }
     

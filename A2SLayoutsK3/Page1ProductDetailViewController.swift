@@ -17,6 +17,14 @@ class Page1ProductDetailViewController: UIViewController, UITableViewDataSource,
     
     var productDetail:ProductRands?
     
+    var productRand:ProductRands?
+    var productAll:ProductAlls?
+    var productTop = Product()
+    
+    var productFrom:String = ""
+    
+    var fromWhere:String?
+    
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         //return 8
         //return 9
@@ -68,14 +76,27 @@ class Page1ProductDetailViewController: UIViewController, UITableViewDataSource,
         Other
         */
         
+        
         if indexPath.section == 0 {
             //Image
             let cell0 = tableView.dequeueReusableCellWithIdentifier(BaseCell.tableCell0) as? Page1ProductDetailCell0TableViewCell
                 let dummyImageURL = NSURL(string: dummyImage("250x176"))
                 //cell0?.imageViewProduct.setImageWithURL(dummyImageURL!)
                 //cell0?.imageViewProduct.setImageWithURL(urlStoreImage(productDetail!.productShowImage!))
-                cell0?.lblProductName.text = productDetail?.productName
-                cell0?.lblProductPrice.text = productDetail?.productPrice
+                //cell0?.lblProductName.text = productDetail?.productName
+            if fromWhere == "ProductRands" {
+                cell0?.lblProductName.text = productRand?.productId
+                cell0?.lblProductPrice.text = productRand?.storeId
+            } else if fromWhere == "ProductTops" {
+                //let productTopA = Product[indexPath.row]
+                //cell0?.lblProductName.text = productTop?.productName
+                //xlet ProductTop:Product?
+                //cell0?.lblProductName.text = productTop.productName
+                //print(productTop.description())
+            } else {
+                print("Error")
+            }
+                //cell0?.lblProductPrice.text = productDetail?.productPrice
             //print(productDetail!.productId!)
             return cell0!
         } else if indexPath.section == 1 {
@@ -193,11 +214,18 @@ class Page1ProductDetailViewController: UIViewController, UITableViewDataSource,
         if segue.identifier == "ProductDetailSegue" {
             //print("Option")
             let destinationVC = segue.destinationViewController as? Page1ProductDetailProductDetailViewController
-            destinationVC!.productDetail = productDetail
+            destinationVC!.productDetail = productRand
+        } else if segue.identifier == "PaymentDetailSegue" {
+            let destinationVC = segue.destinationViewController as? Page1ProductDetailPaymentViewController
+            destinationVC!.productDetail = productRand
+        } else if segue.identifier == "WarrantyDetailSegue" {
+            let destinationVC = segue.destinationViewController as? Page1ProductDetailWarrantyViewController
+            destinationVC!.productDetail = productRand
         } else {
             print("Error")
         }
     }
+    
     
     /*
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
