@@ -117,6 +117,7 @@ class Page1Cell0TableViewCell: UITableViewCell, UICollectionViewDataSource, UICo
         col0?.lblProductName.text = product.productName
         col0?.imageViewProduct.setImageWithURL(urlStoreImage(product.productShowImage!))
         col0?.lblProductPrice.text = product.productPrice
+        ///ol0.
         /*
         // NSArray 
         let item = dataArray[indexPath.row] as! NSDictionary
@@ -151,6 +152,8 @@ class Page1Cell0TableViewCell: UITableViewCell, UICollectionViewDataSource, UICo
         var productIdString = String(product.productId!)
         productTop.productId = product.productId
         productTop.description()
+        
+        
         //var test = Product(_id: productIdString, _name: product.productName!, _image: product.productShowImage!, _price: product.productPrice! , _rating: product.productRating!)
         //print(FromWhere)
         //self.performSegueWithIdentifire
