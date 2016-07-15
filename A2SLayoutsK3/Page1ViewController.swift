@@ -63,6 +63,10 @@ class Page1ViewController: UIViewController, UITableViewDataSource, UITableViewD
             print("ProductDetailSegue3")
             let detailVC = segue.destinationViewController as! Page1ProductDetailViewController
             detailVC.fromWhere = "ProductTops"
+            let cell = sender as? Page1Cell0CollectionViewCell
+            print(cell)
+            let aaa = cell?.aaa
+            print("AAA = \(aaa)")
             //let detailVC = segue.destinationViewController as! Page1ProductDetailViewController
             //var dVC = Page1Cell0TableViewCell.collectionView()
             //let d = segue.destinationViewController as! Page1Cell0TableViewCell

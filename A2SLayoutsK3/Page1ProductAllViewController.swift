@@ -74,6 +74,7 @@ class Page1ProductAllViewController: UIViewController, UICollectionViewDataSourc
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
         if segue.identifier == "ProductDetailSegue" {
             //print("segue")
             let indexPath = self.collectionView.indexPathsForSelectedItems()?.first

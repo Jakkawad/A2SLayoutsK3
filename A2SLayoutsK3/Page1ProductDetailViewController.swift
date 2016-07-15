@@ -15,6 +15,8 @@ class Page1ProductDetailViewController: UIViewController, UITableViewDataSource,
 
     @IBOutlet weak var tableView:UITableView!
     
+    var aaa:ProductRands? = nil
+    
     var productDetail:ProductRands?
     
     var productRand:ProductRands?
@@ -213,6 +215,13 @@ class Page1ProductDetailViewController: UIViewController, UITableViewDataSource,
     */
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if let aaa = aaa {
+            print(aaa.productName)
+        } else {
+            print("er")
+        }
+
         //print(ProductSelected.productArray)
         //ProductSelected.productArray = productDetailArray as! NSArray
         //let item = productDetailArray as! NSDictionary
